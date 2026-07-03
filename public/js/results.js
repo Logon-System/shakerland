@@ -95,15 +95,40 @@ function updateURL() {
 
 function renderTestList() {
   const q = state.search.toLowerCase();
-  const rows = state.tests
+  let filtered = state.tests
     .filter(t => !q || t.id.toLowerCase().includes(q) || t.name.toLowerCase().includes(q))
-    .sort((a, b) => a.id.localeCompare(b.id))
-    .map(t => `<tr data-id="${t.id}" class="${t.id === state.curTestId ? 'selected' : ''}">
-      <td><span class="ok"><strong>${escapeHtml(t.id)}</strong></span> ${escapeHtml(t.name)}</td>
-    </tr>`)
-    .join('');
+    .sort((a, b) => a.id.localeCompare(b.id));
 
-  document.getElementById('tests-list').innerHTML = rows;
+  // Grouper par module
+  const modules = {};
+  filtered.forEach(t => {
+    const module = t.id.charAt(0);
+    if (!modules[module]) modules[module] = [];
+    modules[module].push(t);
+  });
+
+  // Générer les lignes avec séparateurs
+  const rows = [];
+  Object.keys(modules).sort().forEach(module => {
+    // Ajouter le séparateur du module
+    rows.push(`<tr class="module-header">
+      <td><strong>Module ${module}</strong></td>
+    </tr>`);
+
+    // Ajouter les tests du module
+    modules[module].forEach(t => {
+      const isDarkerModule = /^[BD]/.test(t.id);
+      const classes = [
+        t.id === state.curTestId ? 'selected' : '',
+        isDarkerModule ? 'module-darker' : ''
+      ].filter(Boolean).join(' ');
+      rows.push(`<tr data-id="${t.id}" class="${classes}">
+        <td><span class="ok"><strong>${escapeHtml(t.id)}</strong></span> ${escapeHtml(t.name)}</td>
+      </tr>`);
+    });
+  });
+
+  document.getElementById('tests-list').innerHTML = rows.join('');
 
   const sel = document.querySelector('#tests-list tr.selected');
   if (sel) sel.scrollIntoView({ block: 'nearest' });
@@ -169,17 +194,19 @@ function renderTestView() {
     html += '<tr>';
     for (const col of cols) {
       const path = getPath(ev, col);
+      const containerWidth = Math.round(state.imgHeight * 1.6);
       const caption = state.imgHeight > 100
         ? `<figcaption class="centered uppercase">${escapeHtml(archname(col.arch))} CRTC ${col.crtc}</figcaption>`
         : '';
       html += `<td class="centered"><figure>
         <a target="_blank" href="${path}.webp">
-          <img class="roundedcorner"
-               height="${state.imgHeight}"
-               loading="lazy"
-               src="${path}.webp"
-               alt="${escapeHtml(ev.id)}_CRTC${col.crtc}_${escapeHtml(ev.subTest)}"
-               onerror="this.src='/img/notfound.webp';this.onerror=null">
+          <div class="result-image-container" style="width:${containerWidth}px;height:${state.imgHeight}px">
+            <img class="result-image"
+                 loading="lazy"
+                 src="${path}.webp"
+                 alt="${escapeHtml(ev.id)}_CRTC${col.crtc}_${escapeHtml(ev.subTest)}"
+                 onerror="this.src='/img/notfound.webp';this.onerror=null">
+          </div>
         </a>${caption}
       </figure></td>`;
     }
