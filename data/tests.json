@@ -1,0 +1,808 @@
+[
+  {
+    "module": "A",
+    "id": "A1",
+    "name": "UPDATE VRAM VS CRTC/GA",
+    "desc": "§ 8",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "A",
+    "id": "A2",
+    "name": "SKEWDISP ON R0 RUPTURE",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "A",
+    "id": "A3",
+    "name": "CRTC RVMB",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "A",
+    "id": "A4",
+    "name": "UPDATE CRTC R0 TIMING",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "A",
+    "id": "A5",
+    "name": "R13 UPDATE IN 4 USEC SCREENS",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "A",
+    "id": "A6",
+    "name": "R13 UPDATE IN 2 USEC SCREENS",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "A",
+    "id": "A7",
+    "name": "R13 UPDATE IN 1 USEC SCREENS",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "A",
+    "id": "A8",
+    "name": "GATE ARRAY PIXELISATION",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "A",
+    "id": "A9",
+    "name": "GATE ARRAY INKERISATION",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "A",
+    "id": "ACOPY",
+    "name": "CRTC 2 OFFSET",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "A",
+    "id": "AE",
+    "name": "GATE ARRAY MODERISATION",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "A",
+    "id": "AI",
+    "name": "VSYNC CONDITIONS",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "A",
+    "id": "AO",
+    "name": "R1 STORIES",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "A",
+    "id": "AP",
+    "name": "R6 STORIES",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "A",
+    "id": "AR",
+    "name": "MODE UPD > HSYNC DELAY",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "A",
+    "id": "AT",
+    "name": "R2 UPD DURING & AFTER HSYNC",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "A",
+    "id": "AU",
+    "name": "R4 & R9 CHECKINGS",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "A",
+    "id": "AY",
+    "name": "R3 UPD DURING HSYNC",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "B",
+    "id": "B0",
+    "name": "VERTICAL SCROLLING SUB-PIXEL 8,16,32,64,128",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "B",
+    "id": "B1",
+    "name": "INTERLACE C4/C9 COUNTERS",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "B",
+    "id": "B2",
+    "name": "CRTC 2 STRANGER THING INTERLACE",
+    "desc": "Odd Parity",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "B",
+    "id": "B4",
+    "name": "FIND C0 MIN (CRTC 2 NOT EXCLUSIVE)",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "B",
+    "id": "B5",
+    "name": "CRTC 2 : RLAL",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "B",
+    "id": "B6",
+    "name": "CRTC 1 : BUG OUTI R0",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "B",
+    "id": "B7",
+    "name": "CRTC 0 : BUG OVF C4",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "B",
+    "id": "B9",
+    "name": "INTERLACE IVM DELAYS",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "B",
+    "id": "BCAPS",
+    "name": "RVNI LTD (NON INVISIBLE VERTICAL RUPTURE)",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "B",
+    "id": "BCOPY",
+    "name": "CRTC 1 : RFD R5 OTHER TESTS",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "B",
+    "id": "BCTRL",
+    "name": "CRTC 1 : R5 SCANNER",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "B",
+    "id": "BF0",
+    "name": "BOUNGA!",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "B",
+    "id": "BI",
+    "name": "R3 JIT",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "B",
+    "id": "BO",
+    "name": "CRTC 1 IDENTIFIER (1A/1B)",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "B",
+    "id": "BP",
+    "name": "ANALYZER : FIRST TRY TO STAB ON R0=0",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "B",
+    "id": "BR",
+    "name": "INTERRUPT DELAY FROM R2 (SHAKER KILLER)",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "B",
+    "id": "BRETURN",
+    "name": "R5 STORIES",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "B",
+    "id": "BS",
+    "name": "CRTC 1 : CHECK BE00 STATUS",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "B",
+    "id": "BU",
+    "name": "CRTC 0 : R0 = 0",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "C",
+    "id": "C2",
+    "name": "CRTC 1 : IVM ON ODD C9",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "C",
+    "id": "C3",
+    "name": "CRTC 1 : PARITY SWITCH STATUS",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "C",
+    "id": "C4",
+    "name": "CRTC 1 : IVM ON/OFF",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "C",
+    "id": "C5",
+    "name": "CRTC 0/2 : PARITY CHECK SELECT",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "C",
+    "id": "C6",
+    "name": "CRTC 2 : C9. IVM SWITCH",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "C",
+    "id": "C7",
+    "name": "CRTC 2 : LAST LINE CONDITION",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "C",
+    "id": "C8",
+    "name": "CRTC 2 : ADD LINE ON PARITY BUG",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "C",
+    "id": "C9",
+    "name": "CRTC 2 : ADD LINE REQUEST & TRIGGER (!!**!!)",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "C",
+    "id": "CE",
+    "name": "ADD LINE R5 ON LAST LINE",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "C",
+    "id": "CP",
+    "name": "ADD LINE R8",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "C",
+    "id": "CR",
+    "name": "CRTC 0 : LAST LINE LIMITS",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "C",
+    "id": "CRETURN",
+    "name": "GHOST VSYNC VERSUS LAST LINE (OPEN TO OTHER CRTC\\'S)",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "C",
+    "id": "CT",
+    "name": "CRTC 2 : VMA\\' ON R1=0 (OPEN TO OTHER CRTC\\'S)",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "C",
+    "id": "CS",
+    "name": "R5 & INTERLACE MANAGEMENT",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "C",
+    "id": "CO",
+    "name": "INTERLACE VSYNC NIGHTMARE",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "C",
+    "id": "CY",
+    "name": "CRTC 3/4 PARITY",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "D",
+    "id": "DI",
+    "name": "SHAKER KILLER 2",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "D",
+    "id": "DR",
+    "name": "VSYNC TORTURE (LOCK MECHANISM)",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "D",
+    "id": "DT",
+    "name": "VSYNC GATE ARRAY",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "D",
+    "id": "DH",
+    "name": "HSYNC GATE ARRAY",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "D",
+    "id": "D1",
+    "name": "CSYNC4 VS 2 X CSYNC2",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "D",
+    "id": "D2",
+    "name": "CSYNC NOT RELATED TO R2.JIT",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "D",
+    "id": "D3",
+    "name": "2XCSYNC RELATIVE",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "D",
+    "id": "D4",
+    "name": "CSYNC MULTIPLES",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "D",
+    "id": "D6",
+    "name": "HARDWARE SCROLL 1 PIXEL MODE 1/0 (NO BUFFERING)",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "D",
+    "id": "D7",
+    "name": "R2 OSCILLATION STORY",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "D",
+    "id": "D8",
+    "name": "NO HSYNC FOR XX LINES",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "D",
+    "id": "D9",
+    "name": "CRTC 1 : RFD ROUND 2",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "D",
+    "id": "DE",
+    "name": "CRTC 1 : UPD OFF ADD LINE",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "module": "D",
+    "id": "DU",
+    "name": "CRTC 3/4 STATUS",
+    "crtcs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  }
+]

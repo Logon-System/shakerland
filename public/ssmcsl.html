@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shakerland — SSM &amp; CSL</title>
+  <link rel="icon" href="/img/favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+  <nav class="pure-menu pure-menu-horizontal main-menu">
+    <ul class="pure-menu-list main-menu-list">
+      <li class="pure-menu-item">
+        <a href="/welcome" class="pure-menu-link">
+          <img height="44px" src="/img/shakerland_logo_1.webp" alt="Shakerland">
+        </a>
+      </li>
+      <li class="pure-menu-item">
+        <a href="/tests" class="pure-menu-link">
+          <img height="30px" src="/img/results_1.png" alt="Results">
+        </a>
+      </li>
+      <li class="pure-menu-item">
+        <a href="/ssmcsl" class="pure-menu-link pure-menu-active">
+          <img height="30px" src="/img/SSMCSL_1.png" alt="SSM/CSL">
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="welcome-text margin">
+    <h1 class="home-title">Emulator Add-on</h1>
+    <div>
+      <p>
+        A common difficulty encountered by several emulator authors during an update concerns non-regression
+        tests.
+        Indeed, a correction made in the emulation to satisfy the requirements of a particular program can
+        generate side effects on other programs.
+        <br>
+      </p>
+      <p>
+        In order to simplify the non-regressions management between 2 versions, the following method uses at
+        least one of the two standards described below: CSL and SSM
+      </p>
+      <p>
+        <strong>
+          The main method is based on the principle of the automatic screenshots generation by the emulator.
+        </strong>
+        By then comparing the screenshots generated with those of a reference file using a script, it is
+        possible to quickly detect any regression.
+      </p>
+      <p>
+        <a href="https://amspirit.fr">AMSpiriT</a> is the 1st Emulator implementing CSL &amp; SSM protocols.
+        Here is an example showing how it works:
+      </p>
+      <div class="centered">
+        <video controls width="80%">
+          <source src="/drag_drop_csl.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <h2 class="home-title">CSL: Cpc Scripting Language</h2>
+    <div>
+      <p>
+        This is a new type of ascii file format containing instructions that an emulator can interpret.
+        The instructions make it possible to replace the user with commands in order to control the emulation.
+        It is possible to insert a floppy disk, to reset the cpc, to change crtc, to simulate a keyboard input
+        or to define different delays (in emulated µseconds).
+        It is also possible to override the standard name of a screenshot (or a snapshot) and generate it on
+        demand, or launch another script.
+      </p>
+      <p>
+        Here is the latest version of CSL Standard specification:
+        <a target="_blank" href="/CSL-STANDARD_EN.pdf">CSL-STANDARD_EN.pdf</a>
+      </p>
+      <p>
+        <strong>
+          This enables the creation of a script capable of loading a game or a demo in a specific configuration
+          and generating one or more screenshots.
+        </strong>
+        It is then possible to detect regression by simply comparing the content of the generated files with
+        that of the reference files considered to be correct.
+      </p>
+      <p>
+        This format may have other practical applications.
+        For example, this file could be used to present software that requires some interactivity.
+        Used on a web emulator, it avoids storing videos on lost servers in northern Sweden. :-)
+      </p>
+      <p>
+        An emulator could also record and save a CSL file, to later replay an interactive session.
+      </p>
+
+      <h2 class="home-title">SSM: ScreenShot Management</h2>
+      <p>
+        This standard allows a program written in Z80A to ask the emulator to generate screenshots (or
+        snapshots).
+        This implies that the simulated Z80A code takes this standard into account, unlike the screenshots
+        generated via a CSL file.
+        <strong>
+          The main purpose of the SSM standard is to allow non-regression testing of the emulator.
+        </strong>
+      </p>
+      <p>
+        Here is the latest version of SSM Standard specification:
+        <a target="_blank" href="/SSM-STANDARD-EN.pdf">SSM-STANDARD-EN.pdf</a>
+      </p>
+      <p>
+        This system is <strong>neutral for real hardware</strong> because it uses unwired instructions with
+        the prefix ED, which has no other effect than to waste time (to my knowledge).
+        One of the advantages of this system lies in its <strong>precision</strong> since the screenshot takes
+        place at the exact moment when the code requests it.
+      </p>
+      <p>
+        The autonomous SSM system specifies, in its request, a 16-bit code that numbers the image.
+        Although it is possible to generate a screenshot with great precision in the CSL format, the latter is
+        more adapted to programs whose code is "frozen".
+      </p>
+      <p>
+        In general, changes in the code of a program imply a modification of the delays defined in the CSL.
+        <strong>The SSM standard is here more suitable for live programs that evolve regularly.</strong>
+        However, two reserved codes of the SSM format allow the emulation to operate in conjunction with a CSL
+        file, which notably enables file naming via the CSL script.
+      </p>
+
+      <h2 class="home-title">SHAKER</h2>
+      <p>
+        In the context of SHAKER and the SHAKERLAND portal:
+        These <a target="_blank" href="/Shaker_CSL.zip">CSL files</a> are used to automatically launch the
+        different SHAKER test modules and run all the tests.
+        Since SHAKER version 2.5, the tests of the different modules generate SSM codes that allow screenshot
+        generation.
+      </p>
+      <p>
+        These screenshots represent those available on the portal from photos taken on the real hardware.
+        Images are then produced by different emulators at the exact same time.
+      </p>
+      <p>
+        They can also allow us to easily integrate all the images produced by an emulator automatically on the
+        portal.
+        To this end, an EXCEL file allows us to establish the correspondence of the 16-bit SSM codes with the
+        images stored in the SHAKERLAND databases.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>

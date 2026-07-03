@@ -1,0 +1,42 @@
+[
+  {
+    "o": 0,
+    "id": "cpc",
+    "label": "Real Hardware",
+    "version": "CPC",
+    "desc": "Real Hardware",
+    "isEmulator": false
+  },
+  {
+    "o": 1,
+    "id": "amspirit",
+    "label": "Amspirit",
+    "version": "0.953",
+    "desc": "Amspirit",
+    "isEmulator": true
+  },
+  {
+    "o": 2,
+    "id": "winape",
+    "label": "Winape",
+    "version": "2.0b3",
+    "desc": "WinAPE (Win Amstrad Plus Emulator)",
+    "isEmulator": true
+  },
+  {
+    "o": 3,
+    "id": "ace",
+    "label": "ACE",
+    "version": "1.22",
+    "desc": "",
+    "isEmulator": true
+  },
+  {
+    "o": 4,
+    "id": "cpcec",
+    "label": "CPC-EC",
+    "version": "20220806",
+    "desc": "",
+    "isEmulator": true
+  }
+]

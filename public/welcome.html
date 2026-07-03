@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shakerland</title>
+  <link rel="icon" href="/img/favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+  <nav class="pure-menu pure-menu-horizontal main-menu">
+    <ul class="pure-menu-list main-menu-list">
+      <li class="pure-menu-item">
+        <a href="/welcome" class="pure-menu-link pure-menu-active">
+          <img height="44px" src="/img/shakerland_logo_1.webp" alt="Shakerland">
+        </a>
+      </li>
+      <li class="pure-menu-item">
+        <a href="/tests" class="pure-menu-link">
+          <img height="30px" src="/img/results_1.png" alt="Results">
+        </a>
+      </li>
+      <li class="pure-menu-item">
+        <a href="/ssmcsl" class="pure-menu-link">
+          <img height="30px" src="/img/SSMCSL_1.png" alt="SSM/CSL">
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="welcome-text margin">
+    <h1 class="home-title">Welcome to SHAKERLAND!</h1>
+    <div>
+      <p>
+        <img class="img_left_text" height="160px" src="/img/transparent.webp" align="left" hspace="20px" vspace="30px">
+        <strong>SHAKER</strong> is a program designed to run on CPC machines produced by AMSTRAD in the 80s-90s.
+        The objective of this program is to carry out extensive tests on the video circuits of this machine.
+      </p>
+      <p>
+        These video circuits are the <strong>GATE ARRAY</strong> and the <strong>CRTC 6845</strong>.
+        AMSTRAD produced several series of GATE ARRAY and used CRTC models produced by different manufacturers
+        (HITACHI, MOTOROLA, UMC, AMSTRAD)
+      </p>
+      <p>
+        This has been causing compatibility problems on operations that exceed the functional specifications of
+        these circuits.
+        The identified CRTCs are numbered from 0 to 4.
+      </p>
+
+      <h2 id="compendium" class="home-title">CRTC Compendium</h2>
+      <p>
+        <img class="img_left_text2" height="90px" src="/img/logon.webp" align="left" hspace="40px" vspace="30px">
+        A document called "<strong>The Amstrad CPC CRTC Compendium</strong>" describing the operation and the
+        differences between these circuits has been designed in parallel with these programs.
+        You can download the latest version of this document here, in French or in English:
+        <ul>
+          <li><a target="_blank" href="/ACCC1.9-EN.pdf">Compendium 1.9 (English Version)</a></li>
+          <li><a target="_blank" href="/ACCC1.9-FR.pdf">Compendium 1.9 (French Version)</a></li>
+        </ul>
+      </p>
+      <p>
+        In general, several of the tests presented with SHAKER are directly related to chapters of
+        the Compendium.
+        SHAKER is currently in version 2.6 and is composed of 5 executable modules (A - E).
+        You can download it here: <a target="_blank" href="/shaker26.dsk">shaker26.dsk</a>
+      </p>
+      <p>
+        To launch a module, just type <strong>RUN"SHAKE26x"</strong> with x = A, B, C, D or E.
+      </p>
+
+      <h2 class="home-title">What is this page about?</h2>
+      <p>
+        The main objective of this portal is to show the <a href="/tests">results</a> produced by the tests of
+        the different SHAKER modules on real machines.
+      </p>
+      <p>
+        This represents approximately <strong>1500</strong> photos to cover all the tests for the 5
+        identified CRTCs.
+      </p>
+
+      <div class="pure-g center-content">
+        <div class="pure-u-1-12"></div>
+        <div class="pure-u-1-3">
+          <img class="pure-img" src="/img/doc1.webp">
+        </div>
+        <div class="pure-u-1-24"></div>
+        <div class="pure-u-1-3">
+          <img class="pure-img" src="/img/doc2.webp">
+        </div>
+        <div class="pure-u-1-12"></div>
+      </div>
+
+      <br>
+
+      <p>
+        The data can help people working on emulator development to know the expected results when running SHAKER.
+      </p>
+      <p>
+        It is strongly advised to separate the emulation sources from the CRTCs in order to obtain a functional
+        and maintainable result.
+      </p>
+
+      <h2 class="home-title">SHAKER Compliance &amp; Fair Use</h2>
+      <p>
+        <!--img class="img_left_text" height="160px" src="/img/ShakerChecked.webp" align="left" hspace="20px" vspace="30px"-->
+        <strong>SHAKER Approved &amp; Automation Seals</strong>
+      </p>
+      <p>
+        The SHAKER test suite and the Compendium have become benchmarks for accuracy within the Amstrad CPC community. To protect the integrity and reputation of these tests—and to prevent any misleading or unverified claims regarding SHAKER compliance—we are introducing official compliance seals.
+      </p>
+      <p>
+        Our goal is to provide users and developers with a clear, objective standard. Going forward, any author wishing to officially claim SHAKER compliance is invited to submit their emulator for verification.
+      </p>
+      <ul>
+        <li><strong>SHAKER Approved Seal:</strong> Granted to emulators passing the vast majority of SHAKER tests. Because accuracy can vary by hardware generation, approval is strictly categorized by CRTC type. An emulator can be certified for a specific CRTC (e.g., CRTC 0) even if it does not yet fully support others.</li>
+        <li><strong>CSL / SSM Compliant Seal:</strong> A separate distinction for emulators that implement CSL (CPC Scripting Language) and SSM (Screenshot Management for automatic regression testing). Note: An emulator can achieve full SHAKER accuracy approval without supporting CSL/SSM, and vice versa.</li>
+      </ul>
+      <p>
+        <p></p>
+        <strong>How to apply:</strong> If you are an emulator author, you can request your official seals by reaching out to us. Please provide an up-to-date build of your emulator, specify which CRTC types you want reviewed, and indicate whether your project supports the CSL/SSM automation frameworks.
+      </p>
+      <p>
+
+        <h2 class="home-title">A Note on Creative Commons &amp; AI Data Scraping</h2>
+        
+      </p>
+      <p>
+        The Compendium (291 pages of deep-dive into CPC hardware), the SHAKER test programs, and the SHAKERLAND portal are the result of years of hard work, reverse-engineering, and original discoveries—some of which exist nowhere else in the documentation history of these machines.
+      </p>
+      <p>
+        While this project is proudly shared under a Creative Commons license, we want to remind developers—especially those using modern AI tools to assist in building or refining emulator cores—that academic and community courtesy still applies.
+      </p>
+      <p>
+        If you use the knowledge, discoveries, or code from the Compendium, the SHAKER tests, or this portal to develop your software, please show respect for this collective effort: cite your sources and provide a direct link to the Compendium document.
+      </p>
+
+      <h2 class="home-title">Emulators</h2>
+      <p>
+        The portal also allows you to compare the results produced by some emulators with those of real machines.
+        The featured emulators are:
+        <ul>
+          <li><a href="https://forum.system-cfg.com/viewtopic.php?t=11535">AMSPIRIT</a>, Version 0.935</li>
+          <li><a href="https://www.winape.net/">WINAPE</a>, Version 2.0 Beta 3</li>
+          <li><a href="http://ace.cpcscene.net/en:introduction">ACE</a>, Version 1.22</li>
+          <li><a href="http://cngsoft.no-ip.org/cpcec.htm">CPCEC</a>, Version 2022-08-06</li>
+        </ul>
+      </p>
+      <p>
+        <em>Please note: These are not the latest versions of the emulators listed above. We maintain these test results as a reference point to track emulator development over time. If you are an emulator author and have updates to share with us, please do not hesitate to contact us.</em>
+      </p>
+      <p>
+        Sometimes, emulators produce synchronized images when they shouldn't.
+      </p>
+      <p>
+        An emulator can also often behave like another CRTC, in which case it falls under common code issues.
+      </p>
+      <p>
+        Some emulators get stuck on a few tests due to counting errors.
+        This should be fixed in the next version of SHAKER.
+      </p>
+      <p>
+        In case of error on a published image, or update of your emulator, you can request an update.
+        Please then provide the image produced by your emulator, named using the test code, and
+        preferably by making a screenshot that includes the version of the emulator.
+      </p>
+      <p>
+        <strong>
+          Other emulators are welcome on the portal.
+          For people who want their emulator to be added to the current list, please check the
+          <a href="/ssmcsl">SSM&amp;CSL sections</a>, and do not hesitate to contact us.
+        </strong>
+      </p>
+    </div>
+
+    <br>
+    <hr>
+    <div id="credits" class="centered">
+      <br>
+      <p>Graphics by <strong>CED</strong></p>
+      <br>
+      <p>
+        For any information relating to the <strong>Compendium</strong> and <strong>Shaker</strong>,
+        you can contact Longshot (Serge Querné):
+      </p>
+      <p>logon.system@free.fr</p>
+      <br>
+      <p>
+        For any information relating to the <strong>Shakerland portal</strong>,
+        you can contact Siko (Stéphane Sikora):
+      </p>
+      <p>sikoogle+shaker@gmail.com</p>
+      <img height="128px" src="/img/shakerland_logo_2.webp" alt="Shakerland">
+    </div>
+  </div>
+
+</body>
+</html>

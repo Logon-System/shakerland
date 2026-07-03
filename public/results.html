@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shakerland — Results</title>
+  <link rel="icon" href="/img/favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+  <nav class="pure-menu pure-menu-horizontal main-menu">
+    <ul class="pure-menu-list main-menu-list">
+      <li class="pure-menu-item">
+        <a href="/welcome" class="pure-menu-link">
+          <img height="44px" src="/img/shakerland_logo_1.webp" alt="Shakerland">
+        </a>
+      </li>
+      <li class="pure-menu-item">
+        <a href="/tests" class="pure-menu-link pure-menu-active">
+          <img height="30px" src="/img/results_1.png" alt="Results">
+        </a>
+      </li>
+      <li class="pure-menu-item">
+        <a href="/ssmcsl" class="pure-menu-link">
+          <img height="30px" src="/img/SSMCSL_1.png" alt="SSM/CSL">
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="center-content">
+    <div class="pure-g">
+
+      <!-- Left: search + test list -->
+      <div class="pure-u-1-5">
+        <form class="search-form pure-form" onsubmit="return false">
+          <input type="search" id="search-input"
+            placeholder="🔍 Search"
+            class="input-search-form pure-input-rounded"
+            autocomplete="off">
+        </form>
+        <div class="scrollable-panel" id="tests-container">
+          <table class="pure-table pure-table-horizontal">
+            <tbody id="tests-list"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Right: filters + test view -->
+      <div class="pure-u-4-5">
+        <div class="margin">
+          <form class="pure-form" onsubmit="return false">
+            <fieldset>
+              <select id="crtc-select"></select>
+              &nbsp;Size <select id="size-select"></select>
+              &nbsp;<span id="arch-checkboxes"></span>
+            </fieldset>
+          </form>
+          <hr>
+          <div class="scrollable-panel" id="test-view"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="/js/results.js"></script>
+</body>
+</html>
