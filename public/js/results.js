@@ -5,7 +5,7 @@ const state = {
   curTestId:   'A1',
   filter_crtc: 0,
   selArchs:    [],
-  imgHeight:   120,
+  imgHeight:   'auto',
   search:      '',
 };
 
@@ -50,6 +50,25 @@ function subtestName(sub) {
 // "cpc" depuis "cpc_CPC"
 function archname(archKey) {
   return archKey.split('_')[0].toUpperCase();
+}
+
+// Libellé complet d'un arch depuis sa clé "id_version"
+function archLabel(archKey) {
+  const arch = state.archs.find(a => a.id + '_' + a.version === archKey);
+  return arch ? `${arch.label} (${arch.version})` : archname(archKey);
+}
+
+// Texte du tooltip affiché au survol d'une image de résultat
+function resultTooltip(test, sub, col) {
+  const subLabel = sub.subfolder ? `${sub.subfolder} / ${sub.subTest}` : sub.subTest;
+  return [
+    `Module: ${test.module}`,
+    `Test: ${test.id} - ${test.name}`,
+    `Sous-test: ${subLabel}`,
+    `Émulateur: ${archLabel(col.arch)}`,
+    `CRTC: ${col.crtc}`,
+    `Code: ${sub.hex || '?'}`,
+  ].join('\n');
 }
 
 // --- Data ---------------------------------------------------------------------
@@ -137,11 +156,6 @@ function renderFilters() {
       `<option value="${c}" ${c === state.filter_crtc ? 'selected' : ''}>CRTC ${c}</option>`
     ).join('');
 
-  document.getElementById('size-select').innerHTML =
-    [120, 200, 240, 360,480, 600].map(s =>
-      `<option value="${s}" ${s === state.imgHeight ? 'selected' : ''}>${s}</option>`
-    ).join('');
-
   document.getElementById('arch-checkboxes').innerHTML =
     state.archs.map(a => {
       const key = a.id + '_' + a.version;
@@ -180,6 +194,8 @@ function renderTestView() {
     return;
   }
 
+  const isAuto = state.imgHeight === 'auto';
+
   html += '<table class="pure-table-horizontal"><tbody>';
 
   for (const sub of subList) {
@@ -191,18 +207,19 @@ function renderTestView() {
     html += '<tr>';
     for (const col of cols) {
       const path = getPath(test.id, sub, col);
-      const containerWidth = Math.round(state.imgHeight * 1.6);
-      const caption = state.imgHeight > 100
-        ? `<figcaption class="centered uppercase">${escapeHtml(archname(col.arch))} CRTC ${col.crtc}</figcaption>`
-        : '';
+      const caption = `<figcaption class="centered uppercase">${escapeHtml(archname(col.arch))} CRTC ${col.crtc}</figcaption>`;
+      const containerStyle = isAuto
+        ? ''
+        : ` style="width:${Math.round(state.imgHeight * 1.6)}px;height:${state.imgHeight}px"`;
+      const tooltip = escapeHtml(resultTooltip(test, sub, col));
       html += `<td class="centered"><figure>
-        <a target="_blank" href="${path}.webp">
-          <div class="result-image-container" style="width:${containerWidth}px;height:${state.imgHeight}px">
-            <img class="result-image"
+        <a target="_blank" href="${path}.webp" title="${tooltip}">
+          <div class="result-image-container${isAuto ? ' auto' : ''}"${containerStyle}>
+            <img class="result-image${isAuto ? ' auto' : ''}"
                  loading="lazy"
                  src="${path}.webp"
                  alt="${escapeHtml(test.id)}_CRTC${col.crtc}_${escapeHtml(sub.subTest)}"
-                 onerror="this.src='/img/notfound.webp';this.onerror=null">
+                 onerror="this.src='/img/notfound.webp';this.onerror=null;this.closest('a').removeAttribute('href');this.closest('a').classList.add('missing')">
           </div>
         </a>${caption}
       </figure></td>`;
@@ -212,6 +229,11 @@ function renderTestView() {
 
   html += '</tbody></table>';
   container.innerHTML = html;
+}
+
+function updateSizeLabel() {
+  document.getElementById('size-value').textContent =
+    state.imgHeight === 'auto' ? 'Auto' : state.imgHeight + 'px';
 }
 
 function setScrollableHeight() {
@@ -244,8 +266,19 @@ function bindEvents() {
     renderTestView();
   });
 
-  document.getElementById('size-select').addEventListener('change', e => {
-    state.imgHeight = parseInt(e.target.value);
+  const sizeAutoToggle = document.getElementById('size-auto-toggle');
+  const sizeRange      = document.getElementById('size-range');
+
+  sizeAutoToggle.addEventListener('change', () => {
+    sizeRange.disabled = sizeAutoToggle.checked;
+    state.imgHeight = sizeAutoToggle.checked ? 'auto' : parseInt(sizeRange.value);
+    updateSizeLabel();
+    renderTestView();
+  });
+
+  sizeRange.addEventListener('input', () => {
+    state.imgHeight = parseInt(sizeRange.value);
+    updateSizeLabel();
     renderTestView();
   });
 
@@ -271,6 +304,7 @@ async function init() {
   initFromURL();
   bindEvents();
   renderFilters();
+  updateSizeLabel();
   renderTestList();
   renderTestView();
   setScrollableHeight();

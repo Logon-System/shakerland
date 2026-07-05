@@ -51,14 +51,22 @@
       <!-- Right: filters + test view -->
       <div class="pure-u-4-5">
         <div class="margin">
-          <form class="pure-form" onsubmit="return false">
-            <fieldset>
+          <form class="pure-form results-toolbar" onsubmit="return false">
+            <div class="toolbar-row">
               <select id="crtc-select"></select>
-              &nbsp;Size <select id="size-select"></select>
               &nbsp;<span id="arch-checkboxes"></span>
-            </fieldset>
+            </div>
+            <div class="toolbar-row">
+              Size
+              <label style="margin-left:0.5em">
+                <input type="checkbox" id="size-auto-toggle" checked> Auto
+              </label>
+              <input type="range" id="size-range" min="120" max="700" step="10" value="200"
+                     disabled style="vertical-align:middle">
+              <span id="size-value"></span>
+            </div>
           </form>
-          <hr>
+
           <div class="scrollable-panel" id="test-view"></div>
         </div>
       </div>
