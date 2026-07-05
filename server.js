@@ -23,10 +23,6 @@ app.get('/api/tests', (req, res) => {
   res.sendFile(path.join(__dirname, 'data', 'tests.json'));
 });
 
-app.get('/api/evals', (req, res) => {
-  res.sendFile(path.join(__dirname, 'data', 'evals.json'));
-});
-
 // Routes
 const page = (f) => (req, res) => res.sendFile(path.join(__dirname, 'public', f));
 app.get(['/', '/welcome'],        page('welcome.html'));

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Compares expected image filenames (from evals.json + archs.json) with actual
+ * Compares expected image filenames (from tests.json + archs.json) with actual
  * files in PictureBank, then proposes renames using Levenshtein distance.
  *
  * Matching is constrained to the same {testId}_CRTC{n} prefix so we never
@@ -54,14 +54,16 @@ function getPrefix(filename) {
 
 // ── File helpers ──────────────────────────────────────────────────────────────
 
-function getExpectedSet(evals) {
+function getExpectedSet(tests) {
   const expected = new Set();
-  for (const ev of evals) {
-    for (const crtc of ev.crtcs) {
-      const parts = [ev.id, 'CRTC' + crtc];
-      if (ev.subfolder) parts.push(ev.subfolder);
-      parts.push(ev.subTest);
-      expected.add(parts.join('_') + '.webp');
+  for (const test of tests) {
+    for (const sub of test.subtests) {
+      for (const crtc of sub.crtcs) {
+        const parts = [test.id, 'CRTC' + crtc];
+        if (sub.subfolder) parts.push(sub.subfolder);
+        parts.push(sub.subTest);
+        expected.add(parts.join('_') + '.webp');
+      }
     }
   }
   return expected;
@@ -87,9 +89,9 @@ function groupByPrefix(files) {
 // ── Main ──────────────────────────────────────────────────────────────────────
 
 const archs = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'archs.json'), 'utf8'));
-const evals = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'evals.json'), 'utf8'));
+const tests = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'tests.json'), 'utf8'));
 
-const expectedSet = getExpectedSet(evals);
+const expectedSet = getExpectedSet(tests);
 
 const reportLines = [];
 const renameLines = [

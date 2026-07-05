@@ -7,7 +7,7 @@
  *   archId  → SCREENSHOTS/{EMULATOR}/   (amspirit→AMSPIRIT, ace→ACE, …)
  *   testId  → "22{series} TEST {key}"   (B5→"22B TEST 5", BRETURN→"22B TEST RETURN", …)
  *   CRTC N  → "CRTC N/"
- *   subfolder (from evals.json) → exact subdir, or closest-match if not found
+ *   subfolder (from tests.json subtests) → exact subdir, or closest-match if not found
  *   subTest → "{subTest}.bmp" | ".png" | ".jpg"   (tried in that order)
  *
  * Skips files under _OLD/ subdirectories.
@@ -130,7 +130,8 @@ function listSubdirs(dir) {
 // ── Main ─────────────────────────────────────────────────────────────────────
 
 const archs = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'archs.json'), 'utf8'));
-const evals = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'evals.json'), 'utf8'));
+const tests = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'tests.json'), 'utf8'));
+const evals = tests.flatMap(t => t.subtests.map(sub => ({ id: t.id, ...sub })));
 
 const reportLines = [];
 const convertLines = [

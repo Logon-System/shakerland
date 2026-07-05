@@ -4,240 +4,2828 @@
     "id": "A1",
     "name": "UPDATE VRAM VS CRTC/GA",
     "desc": "§ 8",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "0001",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "0002",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C",
+        "hex": "0003",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D",
+        "hex": "0004",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "E",
+        "hex": "0005",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "A",
     "id": "A2",
     "name": "SKEWDISP ON R0 RUPTURE",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "0006",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "A1",
+        "hex": "03A5",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B1",
+        "hex": "0007",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "A2",
+        "hex": "03A6",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B2",
+        "hex": "0008",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "03A7",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C",
+        "hex": "0009",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D",
+        "hex": "000A",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "A",
     "id": "A3",
     "name": "CRTC RVMB",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A1",
+        "hex": "000B",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A2",
+        "hex": "000C",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B1",
+        "hex": "000D",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B2",
+        "hex": "000E",
+        "crtcs": [
+          0,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C1",
+        "hex": "000F",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C2",
+        "hex": "0010",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D1",
+        "hex": "0011",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D2",
+        "hex": "0012",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "E1",
+        "hex": "0013",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "E2",
+        "hex": "0014",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "F1",
+        "hex": "0015",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "F2",
+        "hex": "0016",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G1",
+        "hex": "0017",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G2",
+        "hex": "0018",
+        "crtcs": [
+          0,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "H1",
+        "hex": "0019",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "H2",
+        "hex": "001A",
+        "crtcs": [
+          0,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "I1",
+        "hex": "001B",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "I2",
+        "hex": "001C",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "J1",
+        "hex": "001D",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "J2",
+        "hex": "001E",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "K1",
+        "hex": "001F",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "K2",
+        "hex": "0020",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "L1",
+        "hex": "0021",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "L2",
+        "hex": "0022",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "M1",
+        "hex": "0023",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "M2",
+        "hex": "0024",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "N1",
+        "hex": "0025",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "N2",
+        "hex": "0026",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "O1",
+        "hex": "0027",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "O2",
+        "hex": "0028",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "P1",
+        "hex": "0029",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "P2",
+        "hex": "002A",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "Q1",
+        "hex": "002B",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "Q2",
+        "hex": "002C",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "R1",
+        "hex": "002D",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "R2",
+        "hex": "002E",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "S1",
+        "hex": "002F",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "S2",
+        "hex": "0030",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "T1",
+        "hex": "0031",
+        "crtcs": [
+          0,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "T2",
+        "hex": "0032",
+        "crtcs": [
+          0,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "U1",
+        "hex": "0033",
+        "crtcs": [
+          0,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "U2",
+        "hex": "0034",
+        "crtcs": [
+          0,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "V1",
+        "hex": "0035",
+        "crtcs": [
+          0,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "V2",
+        "hex": "0036",
+        "crtcs": [
+          0,
+          1,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "A",
     "id": "A4",
     "name": "UPDATE CRTC R0 TIMING",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "0037",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "A",
     "id": "A5",
     "name": "R13 UPDATE IN 4 USEC SCREENS",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "0038",
+        "crtcs": [
+          0,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "0039",
+        "crtcs": [
+          0,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C",
+        "hex": "003A",
+        "crtcs": [
+          0,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D",
+        "hex": "003B",
+        "crtcs": [
+          0,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "E",
+        "hex": "003C",
+        "crtcs": [
+          0,
+          1,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "A",
     "id": "A6",
     "name": "R13 UPDATE IN 2 USEC SCREENS",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "003D",
+        "crtcs": [
+          0,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "003E",
+        "crtcs": [
+          0,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C",
+        "hex": "003F",
+        "crtcs": [
+          0,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D",
+        "hex": "007F",
+        "crtcs": [
+          0,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "E",
+        "hex": "0080",
+        "crtcs": [
+          0,
+          1,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "A",
     "id": "A7",
     "name": "R13 UPDATE IN 1 USEC SCREENS",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "0081",
+        "crtcs": [
+          0,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "0082",
+        "crtcs": [
+          0,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C",
+        "hex": "0083",
+        "crtcs": [
+          0,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D",
+        "hex": "0084",
+        "crtcs": [
+          0,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "E",
+        "hex": "0085",
+        "crtcs": [
+          0,
+          1,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "A",
     "id": "A8",
     "name": "GATE ARRAY PIXELISATION",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "0086",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "A",
     "id": "A9",
     "name": "GATE ARRAY INKERISATION",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "0087",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "0088",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C",
+        "hex": "0089",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "A",
     "id": "ACOPY",
     "name": "CRTC 2 OFFSET",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A1",
+        "hex": "008A",
+        "crtcs": [
+          2
+        ]
+      },
+      {
+        "subTest": "A2",
+        "hex": "008B",
+        "crtcs": [
+          2
+        ]
+      }
     ]
   },
   {
     "module": "A",
     "id": "AE",
     "name": "GATE ARRAY MODERISATION",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "008C",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "A",
     "id": "AI",
     "name": "VSYNC CONDITIONS",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "008D",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "008E",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C",
+        "hex": "008F",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D",
+        "hex": "0090",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "E",
+        "hex": "0091",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "A",
     "id": "AO",
     "name": "R1 STORIES",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "0092",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "0093",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C",
+        "hex": "0094",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D",
+        "hex": "0095",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "E",
+        "hex": "0096",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "F",
+        "hex": "0097",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G",
+        "hex": "0098",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "H",
+        "hex": "0099",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "I",
+        "hex": "009A",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "A",
     "id": "AP",
     "name": "R6 STORIES",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A1",
+        "hex": "009B",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A2",
+        "hex": "009C",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "009D",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C",
+        "hex": "009E",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D",
+        "hex": "009F",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "E",
+        "hex": "00A4",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "F",
+        "hex": "00A5",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G",
+        "hex": "00A6",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "H",
+        "hex": "00A7",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "I",
+        "hex": "00AC",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "J",
+        "hex": "00AD",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "K",
+        "hex": "00AE",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "A",
     "id": "AR",
     "name": "MODE UPD > HSYNC DELAY",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A1",
+        "hex": "00AF",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A2",
+        "hex": "00B4",
+        "crtcs": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "subTest": "B1",
+        "hex": "00B5",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B2",
+        "hex": "00B6",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C1",
+        "hex": "00B7",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C2",
+        "hex": "00BC",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "A",
     "id": "AT",
     "name": "R2 UPD DURING & AFTER HSYNC",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "00BD",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "00BE",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C",
+        "hex": "00BF",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D",
+        "hex": "00C0",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "E",
+        "hex": "00C1",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "F",
+        "hex": "00C2",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "A",
     "id": "AU",
     "name": "R4 & R9 CHECKINGS",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "00C3",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "A",
     "id": "AY",
     "name": "R3 UPD DURING HSYNC",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "00C4",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "H",
+        "hex": "03AC",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "00C5",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C",
+        "hex": "00C6",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D",
+        "hex": "00C7",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "E",
+        "hex": "00C8",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "F",
+        "hex": "00C9",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G",
+        "hex": "00CA",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "B",
     "id": "B0",
     "name": "VERTICAL SCROLLING SUB-PIXEL 8,16,32,64,128",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "00CB",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "00CC",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C",
+        "hex": "00CD",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D",
+        "hex": "00CE",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "E",
+        "hex": "00CF",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "B",
     "id": "B1",
     "name": "INTERLACE C4/C9 COUNTERS",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subfolder": "R9E7",
+        "subTest": "SETTINGS",
+        "hex": "00D0",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E7",
+        "subTest": "K1",
+        "hex": "03E5",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E7",
+        "subTest": "A1",
+        "hex": "00D1",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E7",
+        "subTest": "K2",
+        "hex": "03E6",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E7",
+        "subTest": "A2",
+        "hex": "00D2",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E6",
+        "subTest": "K1",
+        "hex": "03E7",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E7",
+        "subTest": "B1",
+        "hex": "00D3",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E6",
+        "subTest": "K2",
+        "hex": "03E8",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E7",
+        "subTest": "B2",
+        "hex": "00D4",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-ODD",
+        "subTest": "K1",
+        "hex": "03E9",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E7",
+        "subTest": "C1",
+        "hex": "00D5",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-ODD",
+        "subTest": "K2",
+        "hex": "03EA",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E7",
+        "subTest": "C2",
+        "hex": "00D6",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-EVEN",
+        "subTest": "K1",
+        "hex": "03EB",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E7",
+        "subTest": "D1",
+        "hex": "00D7",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-EVEN",
+        "subTest": "K2",
+        "hex": "03EC",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E7",
+        "subTest": "D2",
+        "hex": "00D8",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-ODD",
+        "subTest": "K1",
+        "hex": "03ED",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E7",
+        "subTest": "E1",
+        "hex": "00D9",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-ODD",
+        "subTest": "K2",
+        "hex": "03EE",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E7",
+        "subTest": "E2",
+        "hex": "00DA",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-EVEN",
+        "subTest": "K1",
+        "hex": "03EF",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E7",
+        "subTest": "F1",
+        "hex": "00DB",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-EVEN",
+        "subTest": "K2",
+        "hex": "03F0",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E7",
+        "subTest": "F2",
+        "hex": "00DC",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E7",
+        "subTest": "G1",
+        "hex": "00DD",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E7",
+        "subTest": "G2",
+        "hex": "00DE",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E7",
+        "subTest": "H1",
+        "hex": "00DF",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E7",
+        "subTest": "H2",
+        "hex": "00E0",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E7",
+        "subTest": "I1",
+        "hex": "00E1",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E7",
+        "subTest": "I2",
+        "hex": "00E2",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E7",
+        "subTest": "J1",
+        "hex": "00E3",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E7",
+        "subTest": "J2",
+        "hex": "00E4",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E6",
+        "subTest": "SETTINGS",
+        "hex": "00E5",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E6",
+        "subTest": "A1",
+        "hex": "00E6",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E6",
+        "subTest": "A2",
+        "hex": "00E7",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E6",
+        "subTest": "B1",
+        "hex": "00E8",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E6",
+        "subTest": "B2",
+        "hex": "00E9",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E6",
+        "subTest": "C1",
+        "hex": "00EA",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E6",
+        "subTest": "C2",
+        "hex": "00EB",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E6",
+        "subTest": "D1",
+        "hex": "00EC",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E6",
+        "subTest": "D2",
+        "hex": "00ED",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E6",
+        "subTest": "E1",
+        "hex": "00EE",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E6",
+        "subTest": "E2",
+        "hex": "00EF",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E6",
+        "subTest": "F1",
+        "hex": "00F0",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E6",
+        "subTest": "F2",
+        "hex": "00F1",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E6",
+        "subTest": "G1",
+        "hex": "00F2",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E6",
+        "subTest": "G2",
+        "hex": "00F3",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E6",
+        "subTest": "H1",
+        "hex": "00F4",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E6",
+        "subTest": "H2",
+        "hex": "00F5",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E6",
+        "subTest": "I1",
+        "hex": "00F6",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E6",
+        "subTest": "I2",
+        "hex": "00F7",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E6",
+        "subTest": "J1",
+        "hex": "00F8",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E6",
+        "subTest": "J2",
+        "hex": "00F9",
+        "crtcs": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-ODD",
+        "subTest": "SETTINGS",
+        "hex": "00FA",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-ODD",
+        "subTest": "A1",
+        "hex": "00FB",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-ODD",
+        "subTest": "A2",
+        "hex": "00FC",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-ODD",
+        "subTest": "B1",
+        "hex": "00FD",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-ODD",
+        "subTest": "B2",
+        "hex": "0100",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-ODD",
+        "subTest": "C1",
+        "hex": "0101",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-ODD",
+        "subTest": "C2",
+        "hex": "0102",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-ODD",
+        "subTest": "D1",
+        "hex": "0103",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-ODD",
+        "subTest": "D2",
+        "hex": "0104",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-ODD",
+        "subTest": "E1",
+        "hex": "0105",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-ODD",
+        "subTest": "E2",
+        "hex": "0106",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-ODD",
+        "subTest": "F1",
+        "hex": "0107",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-ODD",
+        "subTest": "F2",
+        "hex": "0108",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-ODD",
+        "subTest": "G1",
+        "hex": "0109",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-ODD",
+        "subTest": "G2",
+        "hex": "010A",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-ODD",
+        "subTest": "H1",
+        "hex": "010B",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-ODD",
+        "subTest": "H2",
+        "hex": "010C",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-ODD",
+        "subTest": "I1",
+        "hex": "010D",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-ODD",
+        "subTest": "I2",
+        "hex": "010E",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-ODD",
+        "subTest": "J1",
+        "hex": "010F",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-ODD",
+        "subTest": "J2",
+        "hex": "0110",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-EVEN",
+        "subTest": "SETTINGS",
+        "hex": "0111",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-EVEN",
+        "subTest": "A1",
+        "hex": "0112",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-EVEN",
+        "subTest": "A2",
+        "hex": "0113",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-EVEN",
+        "subTest": "B1",
+        "hex": "0114",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-EVEN",
+        "subTest": "B2",
+        "hex": "0115",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-EVEN",
+        "subTest": "C1",
+        "hex": "0116",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-EVEN",
+        "subTest": "C2",
+        "hex": "0117",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-EVEN",
+        "subTest": "D1",
+        "hex": "0118",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-EVEN",
+        "subTest": "D2",
+        "hex": "0119",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-EVEN",
+        "subTest": "E1",
+        "hex": "011A",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-EVEN",
+        "subTest": "E2",
+        "hex": "011B",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-EVEN",
+        "subTest": "F1",
+        "hex": "011C",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-EVEN",
+        "subTest": "F2",
+        "hex": "011D",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-EVEN",
+        "subTest": "G1",
+        "hex": "011E",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-EVEN",
+        "subTest": "G2",
+        "hex": "011F",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-EVEN",
+        "subTest": "H1",
+        "hex": "0120",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-EVEN",
+        "subTest": "H2",
+        "hex": "0121",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-EVEN",
+        "subTest": "I1",
+        "hex": "0122",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-EVEN",
+        "subTest": "I2",
+        "hex": "0123",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-EVEN",
+        "subTest": "J1",
+        "hex": "0124",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E6-P-EVEN",
+        "subTest": "J2",
+        "hex": "0125",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-ODD",
+        "subTest": "SETTINGS",
+        "hex": "0126",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-ODD",
+        "subTest": "A1",
+        "hex": "0127",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-ODD",
+        "subTest": "A2",
+        "hex": "0128",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-ODD",
+        "subTest": "B1",
+        "hex": "0129",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-ODD",
+        "subTest": "B2",
+        "hex": "012A",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-ODD",
+        "subTest": "C1",
+        "hex": "012B",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-ODD",
+        "subTest": "C2",
+        "hex": "012C",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-ODD",
+        "subTest": "D1",
+        "hex": "012D",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-ODD",
+        "subTest": "D2",
+        "hex": "012E",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-ODD",
+        "subTest": "E1",
+        "hex": "012F",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-ODD",
+        "subTest": "E2",
+        "hex": "0130",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-ODD",
+        "subTest": "F1",
+        "hex": "0131",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-ODD",
+        "subTest": "F2",
+        "hex": "0132",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-ODD",
+        "subTest": "G1",
+        "hex": "0133",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-ODD",
+        "subTest": "G2",
+        "hex": "0134",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-ODD",
+        "subTest": "H1",
+        "hex": "0135",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-ODD",
+        "subTest": "H2",
+        "hex": "0136",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-ODD",
+        "subTest": "I1",
+        "hex": "0137",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-ODD",
+        "subTest": "I2",
+        "hex": "0138",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-ODD",
+        "subTest": "J1",
+        "hex": "0139",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-ODD",
+        "subTest": "J2",
+        "hex": "013A",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-EVEN",
+        "subTest": "SETTINGS",
+        "hex": "013B",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-EVEN",
+        "subTest": "A1",
+        "hex": "013C",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-EVEN",
+        "subTest": "A2",
+        "hex": "013D",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-EVEN",
+        "subTest": "B1",
+        "hex": "013E",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-EVEN",
+        "subTest": "B2",
+        "hex": "013F",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-EVEN",
+        "subTest": "C1",
+        "hex": "017F",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-EVEN",
+        "subTest": "C2",
+        "hex": "0180",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-EVEN",
+        "subTest": "D1",
+        "hex": "0181",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-EVEN",
+        "subTest": "D2",
+        "hex": "0182",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-EVEN",
+        "subTest": "E1",
+        "hex": "0183",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-EVEN",
+        "subTest": "E2",
+        "hex": "0184",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-EVEN",
+        "subTest": "F1",
+        "hex": "0185",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-EVEN",
+        "subTest": "F2",
+        "hex": "0186",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-EVEN",
+        "subTest": "G1",
+        "hex": "0187",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-EVEN",
+        "subTest": "G2",
+        "hex": "0188",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-EVEN",
+        "subTest": "H1",
+        "hex": "0189",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-EVEN",
+        "subTest": "H2",
+        "hex": "018A",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-EVEN",
+        "subTest": "I1",
+        "hex": "018B",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-EVEN",
+        "subTest": "I2",
+        "hex": "018C",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-EVEN",
+        "subTest": "J1",
+        "hex": "018D",
+        "crtcs": [
+          0,
+          2
+        ]
+      },
+      {
+        "subfolder": "R9E57-P-EVEN",
+        "subTest": "J2",
+        "hex": "018E",
+        "crtcs": [
+          0,
+          2
+        ]
+      }
     ]
   },
   {
@@ -245,564 +2833,4097 @@
     "id": "B2",
     "name": "CRTC 2 STRANGER THING INTERLACE",
     "desc": "Odd Parity",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A1",
+        "hex": "018F",
+        "crtcs": [
+          2
+        ]
+      },
+      {
+        "subTest": "A2",
+        "hex": "0190",
+        "crtcs": [
+          2
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "0191",
+        "crtcs": [
+          2
+        ]
+      }
     ]
   },
   {
     "module": "B",
     "id": "B4",
     "name": "FIND C0 MIN (CRTC 2 NOT EXCLUSIVE)",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A1",
+        "hex": "0192",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A2",
+        "hex": "0193",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "0194",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C",
+        "hex": "0195",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D",
+        "hex": "0196",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "E",
+        "hex": "0197",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "F",
+        "hex": "0198",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G",
+        "hex": "0199",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "H",
+        "hex": "019A",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "B",
     "id": "B5",
     "name": "CRTC 2 : RLAL",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "019B",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "019C",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "B",
     "id": "B6",
     "name": "CRTC 1 : BUG OUTI R0",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "019D",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "B",
     "id": "B7",
     "name": "CRTC 0 : BUG OVF C4",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "019E",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "B1",
+        "hex": "019F",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "B2",
+        "hex": "01A4",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "C1",
+        "hex": "01A5",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "C2",
+        "hex": "01A6",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "D1",
+        "hex": "01A7",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "D2",
+        "hex": "01AC",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "E",
+        "hex": "01AD",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "F1",
+        "hex": "01AE",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "F2",
+        "hex": "01AF",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "G1",
+        "hex": "01B4",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "G2",
+        "hex": "01B5",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "H1",
+        "hex": "01B6",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "H2",
+        "hex": "01B7",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "I",
+        "hex": "01BC",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "J1",
+        "hex": "01BD",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "J2",
+        "hex": "01BE",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "K1",
+        "hex": "01BF",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "K2",
+        "hex": "01C0",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "L",
+        "hex": "01C1",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "M",
+        "hex": "01C2",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "N1",
+        "hex": "01C3",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "N2",
+        "hex": "01C4",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "O1",
+        "hex": "01C5",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "O2",
+        "hex": "01C6",
+        "crtcs": [
+          0
+        ]
+      }
     ]
   },
   {
     "module": "B",
     "id": "B9",
     "name": "INTERLACE IVM DELAYS",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "01C7",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "01C8",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C",
+        "hex": "01C9",
+        "crtcs": [
+          0,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D",
+        "hex": "01CA",
+        "crtcs": [
+          0,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "B",
     "id": "BCAPS",
     "name": "RVNI LTD (NON INVISIBLE VERTICAL RUPTURE)",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A1",
+        "hex": "01CB",
+        "crtcs": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "subTest": "A2",
+        "hex": "01CC",
+        "crtcs": [
+          0,
+          1
+        ]
+      },
+      {
+        "subTest": "A3",
+        "hex": "01CD",
+        "crtcs": [
+          0,
+          1
+        ]
+      },
+      {
+        "subTest": "A4",
+        "hex": "01CE",
+        "crtcs": [
+          0,
+          1
+        ]
+      },
+      {
+        "subTest": "B1",
+        "hex": "01CF",
+        "crtcs": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "subTest": "B2",
+        "hex": "01D0",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "B3",
+        "hex": "01D1",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "B4",
+        "hex": "01D2",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "C",
+        "hex": "01D3",
+        "crtcs": [
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "B",
     "id": "BCOPY",
     "name": "CRTC 1 : RFD R5 OTHER TESTS",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "01D4",
+        "crtcs": [
+          0,
+          1
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "01D5",
+        "crtcs": [
+          0,
+          1
+        ]
+      },
+      {
+        "subTest": "C1",
+        "hex": "01D6",
+        "crtcs": [
+          0,
+          1
+        ]
+      },
+      {
+        "subTest": "C2",
+        "hex": "01D7",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "D",
+        "hex": "01D8",
+        "crtcs": [
+          0,
+          1
+        ]
+      },
+      {
+        "subTest": "E",
+        "hex": "01D9",
+        "crtcs": [
+          0,
+          1
+        ]
+      }
     ]
   },
   {
     "module": "B",
     "id": "BCTRL",
     "name": "CRTC 1 : R5 SCANNER",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A1",
+        "hex": "01DA",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "A2",
+        "hex": "01DB",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "A3",
+        "hex": "01DC",
+        "crtcs": [
+          1
+        ]
+      }
     ]
   },
   {
     "module": "B",
     "id": "BF0",
     "name": "BOUNGA!",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "01DD",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "B",
     "id": "BI",
     "name": "R3 JIT",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "01DE",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "01DF",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C",
+        "hex": "01E0",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D",
+        "hex": "01E1",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "E",
+        "hex": "01E2",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "F",
+        "hex": "01E3",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G",
+        "hex": "01E4",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "H",
+        "hex": "01E5",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "B",
     "id": "BO",
     "name": "CRTC 1 IDENTIFIER (1A/1B)",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "TYPE-1A",
+        "hex": "01E6",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "TYPE-1B",
+        "hex": "01E7",
+        "crtcs": [
+          1
+        ]
+      }
     ]
   },
   {
     "module": "B",
     "id": "BP",
     "name": "ANALYZER : FIRST TRY TO STAB ON R0=0",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A1",
+        "hex": "01E8",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A2",
+        "hex": "01E9",
+        "crtcs": [
+          0,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B1",
+        "hex": "01EA",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B2",
+        "hex": "01EB",
+        "crtcs": [
+          0,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C1",
+        "hex": "01EC",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C2",
+        "hex": "01ED",
+        "crtcs": [
+          0,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D1",
+        "hex": "01EE",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D2",
+        "hex": "01EF",
+        "crtcs": [
+          0,
+          1,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "B",
     "id": "BR",
     "name": "INTERRUPT DELAY FROM R2 (SHAKER KILLER)",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "01F0",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "01F1",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C",
+        "hex": "01F2",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D",
+        "hex": "01F3",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "E",
+        "hex": "01F4",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "F",
+        "hex": "01F5",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "B",
     "id": "BRETURN",
     "name": "R5 STORIES",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A1",
+        "hex": "01F6",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A2",
+        "hex": "01F7",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A3",
+        "hex": "01F8",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A4",
+        "hex": "01F9",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A5",
+        "hex": "01FA",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A6",
+        "hex": "01FB",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A7",
+        "hex": "01FC",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A8",
+        "hex": "01FD",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A9",
+        "hex": "0200",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A10",
+        "hex": "0201",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B1",
+        "hex": "0202",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B2",
+        "hex": "0203",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B3",
+        "hex": "0204",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B4",
+        "hex": "0205",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B5",
+        "hex": "0206",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B6",
+        "hex": "0207",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B7",
+        "hex": "0208",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B8",
+        "hex": "0209",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B9",
+        "hex": "020A",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B10",
+        "hex": "020B",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C1",
+        "hex": "020C",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C2",
+        "hex": "020D",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C3",
+        "hex": "020E",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C4",
+        "hex": "020F",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C5",
+        "hex": "0210",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C6",
+        "hex": "0211",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C7",
+        "hex": "0212",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C8",
+        "hex": "0213",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C9",
+        "hex": "0214",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C10",
+        "hex": "0215",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "B",
     "id": "BS",
     "name": "CRTC 1 : CHECK BE00 STATUS",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "0216",
+        "crtcs": [
+          1
+        ]
+      }
     ]
   },
   {
     "module": "B",
     "id": "BU",
     "name": "CRTC 0 : R0 = 0",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "0217",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "0218",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "C",
+        "hex": "0219",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "D",
+        "hex": "021A",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "E",
+        "hex": "021B",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "F",
+        "hex": "021C",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "G",
+        "hex": "021D",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "H",
+        "hex": "021E",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "I",
+        "hex": "021F",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "J",
+        "hex": "0220",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "K",
+        "hex": "0221",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "L",
+        "hex": "0222",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "M",
+        "hex": "0223",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "N",
+        "hex": "0224",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "O",
+        "hex": "0225",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "P",
+        "hex": "0226",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "Q",
+        "hex": "0227",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "R",
+        "hex": "0228",
+        "crtcs": [
+          0
+        ]
+      },
+      {
+        "subTest": "S",
+        "hex": "0229",
+        "crtcs": [
+          0
+        ]
+      }
     ]
   },
   {
     "module": "C",
     "id": "C2",
     "name": "CRTC 1 : IVM ON ODD C9",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A1",
+        "hex": "022A",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "A2",
+        "hex": "022B",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "B1",
+        "hex": "022C",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "B2",
+        "hex": "022D",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "C1",
+        "hex": "022E",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "C2",
+        "hex": "022F",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "D1",
+        "hex": "0230",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "D2",
+        "hex": "0231",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "E1",
+        "hex": "0232",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "E2",
+        "hex": "0233",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "F1",
+        "hex": "0234",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "F2",
+        "hex": "0235",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "G1",
+        "hex": "0236",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "G2",
+        "hex": "0237",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "H1",
+        "hex": "0238",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "H2",
+        "hex": "0239",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "I1",
+        "hex": "023A",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "I2",
+        "hex": "023B",
+        "crtcs": [
+          1
+        ]
+      }
     ]
   },
   {
     "module": "C",
     "id": "C3",
     "name": "CRTC 1 : PARITY SWITCH STATUS",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "023C",
+        "crtcs": [
+          1
+        ]
+      }
     ]
   },
   {
     "module": "C",
     "id": "C4",
     "name": "CRTC 1 : IVM ON/OFF",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "023D",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "023E",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "C",
+        "hex": "023F",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "D",
+        "hex": "027F",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "E",
+        "hex": "0280",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "F",
+        "hex": "0281",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "G",
+        "hex": "0282",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "H",
+        "hex": "0283",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "I",
+        "hex": "0284",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "J1",
+        "hex": "0285",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "J2",
+        "hex": "0286",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "K1",
+        "hex": "0287",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "K2",
+        "hex": "0288",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "L",
+        "hex": "0289",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "M",
+        "hex": "028A",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "N",
+        "hex": "028B",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "O",
+        "hex": "028C",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "P",
+        "hex": "028D",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "Q",
+        "hex": "028E",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "R",
+        "hex": "028F",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "S",
+        "hex": "0290",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "T",
+        "hex": "0291",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "U",
+        "hex": "0292",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "V",
+        "hex": "0293",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "W",
+        "hex": "0294",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "X",
+        "hex": "0295",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "Y1",
+        "hex": "0296",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "Y2",
+        "hex": "0297",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "Z1",
+        "hex": "0298",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "Z2",
+        "hex": "0299",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "ZA",
+        "hex": "029A",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "ZB",
+        "hex": "029B",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "ZC",
+        "hex": "029C",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "ZD",
+        "hex": "029D",
+        "crtcs": [
+          1
+        ]
+      }
     ]
   },
   {
     "module": "C",
     "id": "C5",
     "name": "CRTC 0/2 : PARITY CHECK SELECT",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "029E",
+        "crtcs": [
+          0,
+          2
+        ]
+      }
     ]
   },
   {
     "module": "C",
     "id": "C6",
     "name": "CRTC 2 : C9. IVM SWITCH",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "029F",
+        "crtcs": [
+          2
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "02A4",
+        "crtcs": [
+          2
+        ]
+      },
+      {
+        "subTest": "C",
+        "hex": "02A5",
+        "crtcs": [
+          2
+        ]
+      },
+      {
+        "subTest": "D",
+        "hex": "02A6",
+        "crtcs": [
+          2
+        ]
+      },
+      {
+        "subTest": "E",
+        "hex": "02A7",
+        "crtcs": [
+          2
+        ]
+      },
+      {
+        "subTest": "F",
+        "hex": "02AC",
+        "crtcs": [
+          2
+        ]
+      },
+      {
+        "subTest": "G",
+        "hex": "02AD",
+        "crtcs": [
+          2
+        ]
+      },
+      {
+        "subTest": "H",
+        "hex": "02AE",
+        "crtcs": [
+          2
+        ]
+      },
+      {
+        "subTest": "I",
+        "hex": "02AF",
+        "crtcs": [
+          2
+        ]
+      },
+      {
+        "subTest": "J",
+        "hex": "02B4",
+        "crtcs": [
+          2
+        ]
+      },
+      {
+        "subTest": "K",
+        "hex": "02B5",
+        "crtcs": [
+          2
+        ]
+      },
+      {
+        "subTest": "L",
+        "hex": "02B6",
+        "crtcs": [
+          2
+        ]
+      },
+      {
+        "subTest": "M",
+        "hex": "02B7",
+        "crtcs": [
+          2
+        ]
+      },
+      {
+        "subTest": "N",
+        "hex": "02BC",
+        "crtcs": [
+          2
+        ]
+      },
+      {
+        "subTest": "O",
+        "hex": "02BD",
+        "crtcs": [
+          2
+        ]
+      },
+      {
+        "subTest": "P",
+        "hex": "02BE",
+        "crtcs": [
+          2
+        ]
+      }
     ]
   },
   {
     "module": "C",
     "id": "C7",
     "name": "CRTC 2 : LAST LINE CONDITION",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "02BF",
+        "crtcs": [
+          2
+        ]
+      }
     ]
   },
   {
     "module": "C",
     "id": "C8",
     "name": "CRTC 2 : ADD LINE ON PARITY BUG",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "02C0",
+        "crtcs": [
+          2
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "02C1",
+        "crtcs": [
+          2
+        ]
+      },
+      {
+        "subTest": "C",
+        "hex": "02C2",
+        "crtcs": [
+          2
+        ]
+      },
+      {
+        "subTest": "D",
+        "hex": "02C3",
+        "crtcs": [
+          2
+        ]
+      },
+      {
+        "subTest": "E",
+        "hex": "02C4",
+        "crtcs": [
+          2
+        ]
+      },
+      {
+        "subTest": "F",
+        "hex": "02C5",
+        "crtcs": [
+          2
+        ]
+      },
+      {
+        "subTest": "G",
+        "hex": "02C6",
+        "crtcs": [
+          2
+        ]
+      }
     ]
   },
   {
     "module": "C",
     "id": "C9",
     "name": "CRTC 2 : ADD LINE REQUEST & TRIGGER (!!**!!)",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "02C7",
+        "crtcs": [
+          2
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "02C8",
+        "crtcs": [
+          2
+        ]
+      }
     ]
   },
   {
     "module": "C",
     "id": "CE",
     "name": "ADD LINE R5 ON LAST LINE",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "02C9",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "02CA",
+        "crtcs": [
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "C",
     "id": "CP",
     "name": "ADD LINE R8",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "02CB",
+        "crtcs": [
+          0,
+          1,
+          2
+        ]
+      }
     ]
   },
   {
     "module": "C",
     "id": "CR",
     "name": "CRTC 0 : LAST LINE LIMITS",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "03AD",
+        "crtcs": []
+      },
+      {
+        "subTest": "A",
+        "hex": "03AD",
+        "crtcs": [
+          0
+        ]
+      }
     ]
   },
   {
     "module": "C",
     "id": "CRETURN",
     "name": "GHOST VSYNC VERSUS LAST LINE (OPEN TO OTHER CRTC\\'S)",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "02CD",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "02CE",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "C",
     "id": "CT",
     "name": "CRTC 2 : VMA\\' ON R1=0 (OPEN TO OTHER CRTC\\'S)",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "02CF",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "02D0",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C",
+        "hex": "02D1",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D",
+        "hex": "02D2",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "C",
     "id": "CS",
     "name": "R5 & INTERLACE MANAGEMENT",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "02D3",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "C",
     "id": "CO",
     "name": "INTERLACE VSYNC NIGHTMARE",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "02D4",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "I1",
+        "hex": "03F1",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "02D5",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "I2",
+        "hex": "03F2",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "C1",
+        "hex": "02D6",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "I3",
+        "hex": "03F3",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "C2",
+        "hex": "02D7",
+        "crtcs": [
+          0,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "I4",
+        "hex": "03F4",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "D",
+        "hex": "02D8",
+        "crtcs": [
+          0,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "I5",
+        "hex": "03F5",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "E",
+        "hex": "02D9",
+        "crtcs": []
+      },
+      {
+        "subTest": "I6",
+        "hex": "03F6",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "F",
+        "hex": "02DA",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G1",
+        "hex": "02DB",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G2",
+        "hex": "02DC",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "H1",
+        "hex": "02DD",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "H2",
+        "hex": "02DE",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "C",
     "id": "CY",
     "name": "CRTC 3/4 PARITY",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "02DF",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "02E0",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C",
+        "hex": "02E1",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D",
+        "hex": "02E2",
+        "crtcs": [
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "D",
     "id": "DI",
     "name": "SHAKER KILLER 2",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "02E3",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B1",
+        "hex": "02E4",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B2",
+        "hex": "02E5",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B3",
+        "hex": "02E6",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B4",
+        "hex": "02E7",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B5",
+        "hex": "02E8",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B6",
+        "hex": "02E9",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "D",
     "id": "DR",
     "name": "VSYNC TORTURE (LOCK MECHANISM)",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "02EA",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "D",
     "id": "DT",
     "name": "VSYNC GATE ARRAY",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A1",
+        "hex": "02EB",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A2",
+        "hex": "02EC",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A3",
+        "hex": "02ED",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B1",
+        "hex": "02EE",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B2",
+        "hex": "02EF",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C",
+        "hex": "02F0",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D1",
+        "hex": "02F1",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D2",
+        "hex": "02F2",
+        "crtcs": [
+          0,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "E1",
+        "hex": "02F3",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "E2",
+        "hex": "02F4",
+        "crtcs": [
+          0,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "F1",
+        "hex": "02F5",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "F2",
+        "hex": "02F6",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G1",
+        "hex": "02F7",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G2",
+        "hex": "02F8",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "H1",
+        "hex": "02F9",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "H2",
+        "hex": "02FA",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "I",
+        "hex": "02FB",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "J1",
+        "hex": "02FC",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "J2",
+        "hex": "02FD",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "J3",
+        "hex": "0300",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "J4",
+        "hex": "0301",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "J5",
+        "hex": "0302",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "J6",
+        "hex": "0303",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "J7",
+        "hex": "0304",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "J8",
+        "hex": "0305",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "D",
     "id": "DH",
     "name": "HSYNC GATE ARRAY",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A1",
+        "hex": "0306",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A2",
+        "hex": "0307",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A3",
+        "hex": "0308",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A4",
+        "hex": "0309",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A5",
+        "hex": "030A",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A6",
+        "hex": "030B",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A7",
+        "hex": "030C",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A8",
+        "hex": "030D",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B1",
+        "hex": "030E",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B2",
+        "hex": "030F",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "D",
     "id": "D1",
     "name": "CSYNC4 VS 2 X CSYNC2",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "0310",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "0311",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "D",
     "id": "D2",
     "name": "CSYNC NOT RELATED TO R2.JIT",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "0312",
+        "crtcs": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "0313",
+        "crtcs": [
+          0,
+          1,
+          2
+        ]
+      }
     ]
   },
   {
     "module": "D",
     "id": "D3",
     "name": "2XCSYNC RELATIVE",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A1",
+        "hex": "0314",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A2",
+        "hex": "0315",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A3",
+        "hex": "0316",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A4",
+        "hex": "0317",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A5",
+        "hex": "0318",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A6",
+        "hex": "0319",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A7",
+        "hex": "031A",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A8",
+        "hex": "031B",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A9",
+        "hex": "031C",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A10",
+        "hex": "031D",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A11",
+        "hex": "031E",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B1",
+        "hex": "031F",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B2",
+        "hex": "0320",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B3",
+        "hex": "0321",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B4",
+        "hex": "0322",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B5",
+        "hex": "0323",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B6",
+        "hex": "0324",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B7",
+        "hex": "0325",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B8",
+        "hex": "0326",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B9",
+        "hex": "0327",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B10",
+        "hex": "0328",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B11",
+        "hex": "0329",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C1",
+        "hex": "032A",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C2",
+        "hex": "032B",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C3",
+        "hex": "032C",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C4",
+        "hex": "032D",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C5",
+        "hex": "032E",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C6",
+        "hex": "032F",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C7",
+        "hex": "0330",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C8",
+        "hex": "0331",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C9",
+        "hex": "0332",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C10",
+        "hex": "0333",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C11",
+        "hex": "0334",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D1",
+        "hex": "0335",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D2",
+        "hex": "0336",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D3",
+        "hex": "0337",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D4",
+        "hex": "0338",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D5",
+        "hex": "0339",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D6",
+        "hex": "033A",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D7",
+        "hex": "033B",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D8",
+        "hex": "033C",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D9",
+        "hex": "033D",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D10",
+        "hex": "033E",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D11",
+        "hex": "033F",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "D",
     "id": "D4",
     "name": "CSYNC MULTIPLES",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "037F",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "0380",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "D",
     "id": "D6",
     "name": "HARDWARE SCROLL 1 PIXEL MODE 1/0 (NO BUFFERING)",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "0381",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "0382",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "D",
     "id": "D7",
     "name": "R2 OSCILLATION STORY",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A1",
+        "hex": "0383",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A2",
+        "hex": "0384",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A3",
+        "hex": "0385",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A4",
+        "hex": "0386",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A5",
+        "hex": "0387",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B1",
+        "hex": "0388",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B2",
+        "hex": "0389",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B3",
+        "hex": "038A",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B4",
+        "hex": "038B",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B5",
+        "hex": "038C",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "D",
     "id": "D8",
     "name": "NO HSYNC FOR XX LINES",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A1",
+        "hex": "038D",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A2",
+        "hex": "038E",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A3",
+        "hex": "038F",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A4",
+        "hex": "0390",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A5",
+        "hex": "0391",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "A6",
+        "hex": "0392",
+        "crtcs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ]
   },
   {
     "module": "D",
     "id": "D9",
     "name": "CRTC 1 : RFD ROUND 2",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A1",
+        "hex": "0393",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "A2",
+        "hex": "03F7",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "B1",
+        "hex": "0394",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "B2",
+        "hex": "03F8",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "C1",
+        "hex": "0395",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "C2",
+        "hex": "03F9",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "D",
+        "hex": "0396",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "E",
+        "hex": "0397",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "F",
+        "hex": "0398",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "G",
+        "hex": "0399",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "H",
+        "hex": "039A",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "I",
+        "hex": "039B",
+        "crtcs": [
+          1
+        ]
+      }
     ]
   },
   {
     "module": "D",
     "id": "DE",
     "name": "CRTC 1 : UPD OFF ADD LINE",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "03AE",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "B",
+        "hex": "03AF",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "C",
+        "hex": "03B4",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "D",
+        "hex": "03B5",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "E",
+        "hex": "03B6",
+        "crtcs": [
+          1
+        ]
+      },
+      {
+        "subTest": "F",
+        "hex": "03B7",
+        "crtcs": [
+          1
+        ]
+      }
     ]
   },
   {
     "module": "D",
     "id": "DU",
     "name": "CRTC 3/4 STATUS",
-    "crtcs": [
-      0,
-      1,
-      2,
-      3,
-      4
+    "subtests": [
+      {
+        "subTest": "A",
+        "hex": "03BC",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B1",
+        "hex": "03BD",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "B2",
+        "hex": "03BE",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "C",
+        "hex": "03BF",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "D",
+        "hex": "03C0",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "E",
+        "hex": "03C1",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "F",
+        "hex": "03C2",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G1",
+        "hex": "03C3",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G2",
+        "hex": "03C4",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G3",
+        "hex": "03C5",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G4",
+        "hex": "03C6",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G5",
+        "hex": "03C7",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G6",
+        "hex": "03C8",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G7",
+        "hex": "03C9",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G8",
+        "hex": "03CA",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G9",
+        "hex": "03CB",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G10",
+        "hex": "03CC",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G11",
+        "hex": "03CD",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G12",
+        "hex": "03CE",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G13",
+        "hex": "03CF",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G14",
+        "hex": "03D0",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G15",
+        "hex": "03D1",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G16",
+        "hex": "03D2",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G17",
+        "hex": "03D3",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G18",
+        "hex": "03D4",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G19",
+        "hex": "03D5",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G20",
+        "hex": "03D6",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G21",
+        "hex": "03D7",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G22",
+        "hex": "03D8",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G23",
+        "hex": "03D9",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G24",
+        "hex": "03DA",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G25",
+        "hex": "03DB",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G26",
+        "hex": "03DC",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G27",
+        "hex": "03DD",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G28",
+        "hex": "03DE",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G29",
+        "hex": "03DF",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G30",
+        "hex": "03E0",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G31",
+        "hex": "03E1",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G32",
+        "hex": "03E2",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G33",
+        "hex": "03E3",
+        "crtcs": [
+          3,
+          4
+        ]
+      },
+      {
+        "subTest": "G34",
+        "hex": "03E4",
+        "crtcs": [
+          3,
+          4
+        ]
+      }
     ]
   }
 ]

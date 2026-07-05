@@ -1,7 +1,6 @@
 // State
 const state = {
   tests:       [],
-  evals:       [],
   archs:       [],
   curTestId:   'A1',
   filter_crtc: 0,
@@ -26,24 +25,24 @@ function debounce(fn, ms) {
 }
 
 // /images/cpc/CPC/A1_CRTC0_A  (sans extension)
-function getPath(ev, col) {
+function getPath(testId, sub, col) {
   const archPath = col.arch.replace('_', '/');
-  const parts = [ev.id, 'CRTC' + col.crtc];
-  if (ev.subfolder) parts.push(ev.subfolder);
-  parts.push(ev.subTest);
+  const parts = [testId, 'CRTC' + col.crtc];
+  if (sub.subfolder) parts.push(sub.subfolder);
+  parts.push(sub.subTest);
   return `/images/${archPath}/${parts.join('_')}`;
 }
 
 // Vrai si ce subtest ouvre un nouveau groupe visuel (séparateur)
-function isFirstSubTest(ev) {
-  const s = ev.subTest;
+function isFirstSubTest(sub) {
+  const s = sub.subTest;
   return /[A-Z1]$/.test(s);
 }
 
 // Nom affiché dans le séparateur : "R9E7/A" pour {subfolder:"R9E7", subTest:"A1"}
-function subtestName(ev) {
-  const prefix = ev.subfolder ? ev.subfolder + '/' : '';
-  let s = ev.subTest;
+function subtestName(sub) {
+  const prefix = sub.subfolder ? sub.subfolder + '/' : '';
+  let s = sub.subTest;
   if (/[1-9]$/.test(s)) s = s.slice(0, -1);
   return prefix + s;
 }
@@ -56,14 +55,12 @@ function archname(archKey) {
 // --- Data ---------------------------------------------------------------------
 
 async function loadData() {
-  const [archs, tests, evals] = await Promise.all([
+  const [archs, tests] = await Promise.all([
     fetch('/api/archs').then(r => r.json()),
     fetch('/api/tests').then(r => r.json()),
-    fetch('/api/evals').then(r => r.json()),
   ]);
   state.archs = archs;
   state.tests = tests;
-  state.evals = evals;
 }
 
 function initFromURL() {
@@ -141,7 +138,7 @@ function renderFilters() {
     ).join('');
 
   document.getElementById('size-select').innerHTML =
-    [80, 120, 200, 240, 480, 600, 720].map(s =>
+    [120, 200, 240, 360,480, 600].map(s =>
       `<option value="${s}" ${s === state.imgHeight ? 'selected' : ''}>${s}</option>`
     ).join('');
 
@@ -160,8 +157,8 @@ function renderTestView() {
   const test = state.tests.find(t => t.id === state.curTestId);
   if (!test) { container.innerHTML = ''; return; }
 
-  const evList = state.evals
-    .filter(e => e.idTest === state.curTestId && e.crtcs.includes(state.filter_crtc))
+  const subList = (test.subtests || [])
+    .filter(s => s.crtcs.includes(state.filter_crtc))
     .sort((a, b) => {
       const sf = (a.subfolder || '').localeCompare(b.subfolder || '');
       return sf !== 0 ? sf : a.subTest.localeCompare(b.subTest);
@@ -171,7 +168,7 @@ function renderTestView() {
 
   let html = `<h1>${escapeHtml(test.id)}: ${escapeHtml(test.name)}</h1>`;
 
-  if (evList.length === 0) {
+  if (subList.length === 0) {
     html += `<p style="margin-top:1em">No results for CRTC ${state.filter_crtc}</p>`;
     container.innerHTML = html;
     return;
@@ -185,15 +182,15 @@ function renderTestView() {
 
   html += '<table class="pure-table-horizontal"><tbody>';
 
-  for (const ev of evList) {
-    if (isFirstSubTest(ev)) {
+  for (const sub of subList) {
+    if (isFirstSubTest(sub)) {
       html += `<tr class="separation">
-        <td colspan="${cols.length}">${escapeHtml(subtestName(ev))}</td>
+        <td colspan="${cols.length}">${escapeHtml(subtestName(sub))}</td>
       </tr>`;
     }
     html += '<tr>';
     for (const col of cols) {
-      const path = getPath(ev, col);
+      const path = getPath(test.id, sub, col);
       const containerWidth = Math.round(state.imgHeight * 1.6);
       const caption = state.imgHeight > 100
         ? `<figcaption class="centered uppercase">${escapeHtml(archname(col.arch))} CRTC ${col.crtc}</figcaption>`
@@ -204,7 +201,7 @@ function renderTestView() {
             <img class="result-image"
                  loading="lazy"
                  src="${path}.webp"
-                 alt="${escapeHtml(ev.id)}_CRTC${col.crtc}_${escapeHtml(ev.subTest)}"
+                 alt="${escapeHtml(test.id)}_CRTC${col.crtc}_${escapeHtml(sub.subTest)}"
                  onerror="this.src='/img/notfound.webp';this.onerror=null">
           </div>
         </a>${caption}
