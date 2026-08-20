@@ -112,7 +112,10 @@ function updateURL() {
 function renderTestList() {
   const q = state.search.toLowerCase();
   let filtered = state.tests
-    .filter(t => !q || t.id.toLowerCase().includes(q) || t.name.toLowerCase().includes(q))
+    .filter(t => !q
+      || t.id.toLowerCase().includes(q)
+      || t.name.toLowerCase().includes(q)
+      || (t.subtests || []).some(s => s.hex && s.hex.toLowerCase().includes(q)))
     .sort((a, b) => a.id.localeCompare(b.id));
 
   // Grouper par module
