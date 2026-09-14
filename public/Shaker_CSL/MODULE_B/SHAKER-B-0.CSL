@@ -7,9 +7,9 @@ csl_version 1.0
 crtc_select 0
 reset
 wait 3000000
-disk_insert 'shaker26.dsk'
+disk_insert 'shaker27.dsk'
 key_delay 70000 70000 400000
-key_output 'RUN"SHAKE26B"\(RET)'
+key_output 'RUN"SHAKE27B.BIN"\(RET)'
 wait 10000000
 ;
 ; test 1 interlace c4/c9 counters R9 base=07 Parity Odd
@@ -387,4 +387,4 @@ wait 100000000	; 13560624+638976
 key_output ' '
 wait 1000000
 
-csl_load 'SHAKE26B-1'
+csl_load 'SHAKER-B-1'

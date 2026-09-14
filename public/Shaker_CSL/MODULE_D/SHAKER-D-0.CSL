@@ -1,15 +1,15 @@
 ;
 ; Fichier de script CSL 
-; Execution du module SHAKE26D du DSK SHAKER26.DSK en CRTC 2
+; Execution du module SHAKE26D du DSK SHAKER26.DSK en CRTC 0
 ; Le module genere des instructions au format SSM
 ;
 csl_version 1.0
-crtc_select 2
+crtc_select 0
 reset
 wait 3000000
-disk_insert 'shaker26.dsk'
+disk_insert 'shaker27.dsk'
 key_delay 70000 70000 400000
-key_output 'RUN"SHAKE26D"\(RET)'
+key_output 'RUN"SHAKE27D.BIN"\(RET)'
 wait 10000000
 ;
 ; SHAKER KILLER 2 
@@ -80,6 +80,7 @@ key_delay 90000 90000 400000
 key_output '                                                '
 key_output '                                                '
 wait 1000000 ; menu
+
 
 ; HSYNC CSYNC GATE ARRAY
 key_output 'H'
@@ -154,6 +155,7 @@ key_output ' '
 wait 10000000	; 382
 key_output ' '
 wait 1000000
+
 ;
 ; R2 oscillation story;
 key_output '7'
@@ -196,4 +198,4 @@ key_output ' '
 wait 1000000		; menu
 
 
-csl_load 'SHAKE26D-4'
+csl_load 'SHAKER-D-1'

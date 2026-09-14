@@ -294,4 +294,4 @@ wait 800000		; 619008
 key_output ' '
 wait 1000000
 
-csl_load 'SHAKE26A-3'
+csl_load 'SHAKER-A-3'

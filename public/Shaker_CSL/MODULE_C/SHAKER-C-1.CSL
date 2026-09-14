@@ -7,9 +7,9 @@ csl_version 1.0
 crtc_select 1
 reset
 wait 3000000
-disk_insert 'shaker26.dsk'
+disk_insert 'shaker27.dsk'
 key_delay 70000 70000 400000
-key_output 'RUN"SHAKE26C"\(RET)'
+key_output 'RUN"SHAKE27C.BIN"\(RET)'
 wait 10000000
 ;
 ; R8 IVM ODD C9
@@ -184,4 +184,4 @@ wait 3000000		; parity01f
 key_output ' '
 wait 1000000
 
-csl_load 'SHAKE26C-2'
+csl_load 'SHAKER-C-2'

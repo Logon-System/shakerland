@@ -1,10 +1,10 @@
 ;
 ; Fichier de script CSL 
-; Execution du module SHAKE26A du DSK SHAKER26.DSK en CRTC 2
+; Execution du module SHAKE26A du DSK SHAKER26.DSK en CRTC 0
 ; Le module genere des instructions au format SSM
 ;
 csl_version 1.0
-crtc_select 2
+crtc_select 0
 reset
 wait 3000000 
 disk_insert 'shaker26.dsk'
@@ -110,7 +110,46 @@ key_output ' '
 wait 10000000
 ;
 key_output '4' 
-wait 8000000	; 6743019
+wait 9000000	; 6743019
+key_output ' ' 
+wait 1000000
+;
+key_output '5'
+wait 800000		; 434016
+key_output ' ' 
+wait 800000		; 547328
+key_output ' ' 
+wait 800000		; 567296
+key_output ' ' 
+wait 800000		; 587264
+key_output ' ' 
+wait 800000		; 607232
+key_output ' ' 
+wait 1000000
+;
+key_output '6'
+wait 800000	; 473960
+key_output ' ' 
+wait 800000	; 607232
+key_output ' ' 
+wait 800000	; 627200
+key_output ' ' 
+wait 800000	; 647168
+key_output ' ' 
+wait 800000	; 667136
+key_output ' ' 
+wait 1000000
+;
+key_output '7'
+wait 800000		; 473957
+key_output ' ' 
+wait 800000		; 667072
+key_output ' ' 
+wait 800000		; 527296
+key_output ' ' 
+wait 800000		; 547264
+key_output ' ' 
+wait 800000		; 567232
 key_output ' ' 
 wait 1000000
 ;
@@ -255,13 +294,4 @@ wait 800000		; 619008
 key_output ' '
 wait 1000000
 ;
-; crtc 2
-;
-key_output '\(COP)'
-wait 8500000		; 8313240
-wait 500000		; 319488
-key_output ' '
-wait 1000000
-;
-;
-csl_load 'SHAKE26A-4'
+csl_load 'SHAKER-A-1'

@@ -1,15 +1,15 @@
 ;
 ; Fichier de script CSL 
-; Execution du module SHAKE26C du DSK SHAKER26.DSK en CRTC 4
+; Execution du module SHAKE26C du DSK SHAKER26.DSK en CRTC 3
 ; Le module genere des instructions au format SSM
 ;
 csl_version 1.0
-crtc_select 4
+crtc_select 3
 reset
 wait 3000000
-disk_insert 'shaker26.dsk'
+disk_insert 'shaker27.dsk'
 key_delay 70000 70000 400000
-key_output 'RUN"SHAKE26C"\(RET)'
+key_output 'RUN"SHAKE27C.BIN"\(RET)'
 wait 10000000
 
 ; test prevu pour CRTC 2 mais disp autre crc  Last Line cond
@@ -91,4 +91,4 @@ wait 5000000
 key_output ' '
 wait 10000000	; menu
 
-csl_load 'SHAKE26C-3'
+reset

@@ -1,23 +1,29 @@
 ;
 ; Fichier de script CSL 
-; Execution du module SHAKE26C du DSK SHAKER26.DSK en CRTC 3
+; Execution du module SHAKE26C du DSK SHAKER26.DSK en CRTC 0
 ; Le module genere des instructions au format SSM
 ;
 csl_version 1.0
-crtc_select 3
+crtc_select 0
 reset
 wait 3000000
-disk_insert 'shaker26.dsk'
+disk_insert 'shaker27.dsk'
 key_delay 70000 70000 400000
-key_output 'RUN"SHAKE26C"\(RET)'
+key_output 'RUN"SHAKE27C.BIN"\(RET)'
 wait 10000000
+;
+; test 5 Parity Check Select CRTC 0, 2
+key_output '5'
+wait 10000000		
+key_output ' ' 
+wait 1000000 ; menu
 
 ; test prevu pour CRTC 2 mais disp autre crc  Last Line cond
 key_output '7'
 wait 64000000
 key_output ' ' 
-wait 1000000 ; menu 
-;
+wait 1000000 ; menu
+
 ; test crtc 2 vma' sur R1=0
 key_output 'T'
 wait 1100000
@@ -32,58 +38,54 @@ wait 1000000 ; menu
 
 ; crtc 2 ghost vsync vs Last Line (others crtc welcome)
 key_output '\(RET)'
-wait 5000000		; 2cd
+wait 5000000
 key_output ' '
-wait 2000000		; 2ce
+wait 2000000
 key_output ' '
 wait 1000000 ; menu
 
 ; Add Line R5 on last line
 key_output 'E'
-wait 10000000	; 2c9
+wait 10000000
 key_output ' '
-wait 5000000	; 2ca
+wait 5000000
+key_output ' '
+wait 1000000 ; menu
+
+; Add line R8
+key_output 'P'
+wait 12000000
 key_output ' '
 wait 1000000 ; menu
 
 ; r5 additional line in interlace mode
 key_output 'S'
-wait 2000000		; 2d3
+wait 2000000
 key_output ' '
 wait 1000000 ; menu
 
-; CRTC 2 Interlace vsync nightmare (2 1er test uniqu CRTC1)
+; CRTC 0,3,4 Interlace vsync nightmare (2 1er test uniqu CRTC1)
 key_output 'O'
-wait 6000000	; cvstot 2d6
+wait 4000000
 key_output ' '
-wait 3500000	; cvstot 2d7
+wait 6000000
 key_output ' '
-wait 2000000	; parity00
+wait 1000000
 wait 8000000
 key_output ' '
-wait 10000000	; cvms_a 2d8
+wait 9000000
 key_output ' '
-wait 10000000	; cvms_b
+wait 9000000
 key_output ' '
-wait 10000000	; cvms_b
+wait 10000000
 key_output ' '
-wait 10000000	; cvms_c
+wait 9000000
 key_output ' '
-wait 10000000	; cvms_c
+wait 10000000
 key_output ' '
-wait 10000000	; menu
-
-; Y crtc 3/4 parity
-key_output 'Y'
-wait 4500000	; 2df
+wait 10000000
 key_output ' '
-wait 1000000	; 2e0
-key_output ' '
-wait 1000000	; 2e1
-key_output ' '
-wait 1000000	; 2e2
-key_output ' '
-wait 10000000	; menu
+wait 1000000 ; menu
 
 ; R9/R4 UPD LAST LIMIT
 key_output 'R'
@@ -91,4 +93,4 @@ wait 5000000
 key_output ' '
 wait 10000000	; menu
 
-reset
+csl_load 'SHAKER-C-1'

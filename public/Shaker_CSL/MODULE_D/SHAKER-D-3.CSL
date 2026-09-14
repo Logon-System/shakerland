@@ -1,15 +1,15 @@
 ;
 ; Fichier de script CSL 
-; Execution du module SHAKE26D du DSK SHAKER26.DSK en CRTC 0
+; Execution du module SHAKE26D du DSK SHAKER26.DSK en CRTC 4
 ; Le module genere des instructions au format SSM
 ;
 csl_version 1.0
-crtc_select 0
+crtc_select 3
 reset
 wait 3000000
-disk_insert 'shaker26.dsk'
+disk_insert 'shaker27.dsk'
 key_delay 70000 70000 400000
-key_output 'RUN"SHAKE26D"\(RET)'
+key_output 'RUN"SHAKE27D.BIN"\(RET)'
 wait 10000000
 ;
 ; SHAKER KILLER 2 
@@ -80,7 +80,6 @@ key_delay 90000 90000 400000
 key_output '                                                '
 key_output '                                                '
 wait 1000000 ; menu
-
 
 ; HSYNC CSYNC GATE ARRAY
 key_output 'H'
@@ -197,5 +196,90 @@ wait 3000000		; 392
 key_output ' '
 wait 1000000		; menu
 
-
-csl_load 'SHAKE26D-1'
+;
+; CRTC 3/4 STATUS
+key_output 'U'
+wait 10000000	; 3bc
+key_output ' '
+wait 10000000	; 3bd
+key_output ' '
+wait 10000000	; 3be
+key_output ' '
+wait 15000000 ; 3bf
+key_output ' '
+wait 45000000 ; 3c0
+key_output ' '
+wait 10000000 ; 3c1
+key_output ' '
+wait 4000000 ; 3c2
+key_output ' '
+wait 4000000 ; 3c3
+key_output ' '
+wait 4000000 ; 3c4
+key_output ' '
+wait 4000000 ; 3c5
+key_output ' '
+wait 4000000 ; 3c6
+key_output ' '
+wait 4000000 ; 3c7
+key_output ' '
+wait 4000000 ; 3c8
+key_output ' '
+wait 4000000 ; 3c9
+key_output ' '
+wait 4000000 ; 3ca
+key_output ' '
+wait 4000000 ; 3cb
+key_output ' '
+wait 4000000 ; 3cc
+key_output ' '
+wait 4000000 ; 3cd
+key_output ' '
+wait 4000000 ; 3ce
+key_output ' '
+wait 4000000 ; 3cf
+key_output ' '
+wait 4000000 ; 3d0
+key_output ' '
+wait 4000000 ; 3d1
+key_output ' '
+wait 4000000 ; 3d2
+key_output ' '
+wait 4000000 ; 3d3
+key_output ' '
+wait 4000000 ; 3d4
+key_output ' '
+wait 4000000 ; 3d5
+key_output ' '
+wait 4000000 ; 3d6
+key_output ' '
+wait 4000000 ; 3d7
+key_output ' '
+wait 4000000 ; 3d8
+key_output ' '
+wait 4000000 ; 3d9
+key_output ' '
+wait 4000000 ; 3da
+key_output ' '
+wait 4000000 ; 3db
+key_output ' '
+wait 4000000 ; 3dc
+key_output ' '
+wait 4000000 ; 3dd
+key_output ' '
+wait 4000000 ; 3de
+key_output ' '
+wait 4000000 ; 3df
+key_output ' '
+wait 4000000 ; 3e0
+key_output ' '
+wait 4000000 ; 3e1
+key_output ' '
+wait 4000000 ; 3e2
+key_output ' '
+wait 4000000 ; 3e3
+key_output ' '
+wait 4000000 ; 3e4
+key_output ' '
+wait 4000000		; menu
+reset
