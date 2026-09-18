@@ -8,6 +8,7 @@ RUN npm ci --omit=dev
 COPY server.js ./
 COPY public/ ./public/
 COPY data/ ./data/
+COPY lib/ ./lib/
 
 ENV PORT=3000
 ENV PICTURES_DIR=/images
