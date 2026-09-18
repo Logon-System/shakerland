@@ -8,6 +8,9 @@
     "dev": "node --watch server.js"
   },
   "dependencies": {
-    "express": "^4.19.2"
+    "@cwasm/webp": "^0.1.5",
+    "express": "^4.19.2",
+    "pixelmatch": "^5.3.0",
+    "pngjs": "^7.0.0"
   }
 }

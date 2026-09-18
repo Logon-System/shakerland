@@ -11,7 +11,15 @@
     "o": 1,
     "id": "amspirit",
     "label": "Amspirit",
-    "version": "2.0",
+    "version": "0.953",
+    "desc": "Amspirit",
+    "isEmulator": true
+  },
+  {
+    "o": 1,
+    "id": "amspirit",
+    "label": "Amspirit-lite",
+    "version": "lite-1.15",
     "desc": "Amspirit",
     "isEmulator": true
   },

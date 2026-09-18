@@ -1,1 +1,9 @@
 node_modules/
+
+# /compare debug tool: cached pixel-diff reports (regenerable via ?refresh=1),
+# and the CSL scripts annotate-csl.js derives from public/Shaker_CSL/ (regenerate
+# with scripts/capture-run.sh, don't hand-edit or commit). Raw capture runs
+# default straight into PictureBank/ (already external/untracked, see
+# PICTURES_DIR — not this repo's concern to ignore).
+data/compare-cache/
+public/Shaker_CSL_capture/

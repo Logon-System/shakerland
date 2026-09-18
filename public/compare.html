@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shakerland — Compare (internal)</title>
+  <link rel="icon" href="/img/favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <style>
+    /* Internal debug tool: kept out of the main nav, minimal styling. */
+    .compare-wrap { max-width: 1100px; margin: 0 auto; padding: 1em 1.5em 3em; }
+    .compare-toolbar { display: flex; gap: 1em; align-items: end; flex-wrap: wrap; margin-bottom: 1em; }
+    .compare-toolbar label { display: block; font-size: 0.85em; margin-bottom: 0.2em; }
+    #summary { margin: 1em 0; }
+    #summary span { display: inline-block; margin-right: 1.2em; }
+    table.compare-table td, table.compare-table th { padding: 0.3em 0.6em; }
+    tr.row-diff td.pct { color: #b00; font-weight: bold; }
+    tr.row-match td.pct { color: #0a0; }
+    tr.selected { background: #eef; }
+    #detail { margin-top: 1.5em; }
+    #detail .shots { display: flex; gap: 1em; flex-wrap: wrap; }
+    #detail figure { margin: 0; }
+    #detail img { max-width: 320px; image-rendering: pixelated; border: 1px solid #ccc; }
+    #detail figcaption { text-align: center; font-size: 0.8em; }
+  </style>
+</head>
+<body>
+
+  <div class="compare-wrap">
+    <h1>Compare runs <small>(internal debug tool)</small></h1>
+    <p><a href="/welcome">&larr; back to Shakerland</a></p>
+
+    <form class="compare-toolbar pure-form" onsubmit="return false">
+      <div>
+        <label for="runA-select">Run A</label>
+        <select id="runA-select"></select>
+      </div>
+      <div>
+        <label for="runB-select">Run B</label>
+        <select id="runB-select"></select>
+      </div>
+      <div>
+        <button id="compare-btn" class="pure-button pure-button-primary">Compare</button>
+      </div>
+      <div>
+        <button id="refresh-btn" class="pure-button">Force refresh</button>
+      </div>
+    </form>
+
+    <div id="summary"></div>
+    <div id="table-container"></div>
+    <div id="detail"></div>
+  </div>
+
+  <script src="/js/compare.js"></script>
+</body>
+</html>
