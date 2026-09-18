@@ -210,7 +210,7 @@ function renderTestView() {
     html += '<tr>';
     for (const col of cols) {
       const path = getPath(test.id, sub, col);
-      const caption = `<figcaption class="centered uppercase">${escapeHtml(archname(col.arch))} CRTC ${col.crtc}</figcaption>`;
+      const caption = `<figcaption class="centered uppercase">${escapeHtml(archLabel(col.arch))} CRTC ${col.crtc}</figcaption>`;
       const containerStyle = isAuto
         ? ''
         : ` style="width:${Math.round(state.imgHeight * 1.6)}px;height:${state.imgHeight}px"`;

@@ -3,6 +3,7 @@
 
 const state = {
   runs: [],
+  groups: {}, // run's first path segment -> its sibling runs
   report: null, // { runA, runB, generatedAt, results, summary }
   selected: null, // result row currently shown in #detail
 };
@@ -15,14 +16,50 @@ function escapeHtml(s) {
     .replace(/"/g, '&quot;');
 }
 
+// A run is grouped by its first path segment (e.g. "amspirit/fork-3d52bad10e7d" -> "amspirit"),
+// which is the same emulator/arch across its different captured versions. Comparing two runs
+// only makes sense within the same group, so Run A only offers groups with 2+ runs, and Run B
+// is limited to the other runs in Run A's group.
+function runGroup(run) {
+  return run.split('/')[0];
+}
+
+function runsByGroup() {
+  const groups = {};
+  for (const r of state.runs) {
+    const g = runGroup(r);
+    (groups[g] || (groups[g] = [])).push(r);
+  }
+  return groups;
+}
+
+function optionsHtml(runs, placeholder) {
+  const placeholderOpt = placeholder ? `<option value="">${escapeHtml(placeholder)}</option>` : '';
+  return placeholderOpt + runs.map(r => `<option value="${escapeHtml(r)}">${escapeHtml(r)}</option>`).join('');
+}
+
+function populateRunB(runA) {
+  const runBSelect = document.getElementById('runB-select');
+  if (!runA) {
+    runBSelect.innerHTML = optionsHtml([], 'Select Run A first');
+    runBSelect.disabled = true;
+    return;
+  }
+  const siblings = state.groups[runGroup(runA)].filter(r => r !== runA);
+  runBSelect.innerHTML = optionsHtml(siblings, siblings.length ? null : 'No other version available');
+  runBSelect.disabled = siblings.length === 0;
+}
+
 async function loadRuns() {
   state.runs = await fetch('/api/runs').then(r => r.json());
-  const opts = state.runs.map(r => `<option value="${escapeHtml(r)}">${escapeHtml(r)}</option>`).join('');
-  document.getElementById('runA-select').innerHTML = opts;
-  document.getElementById('runB-select').innerHTML = opts;
-  if (state.runs.length > 1) {
-    document.getElementById('runB-select').selectedIndex = 1;
-  }
+  state.groups = runsByGroup();
+  const comparableRuns = state.runs.filter(r => state.groups[runGroup(r)].length > 1);
+
+  const runASelect = document.getElementById('runA-select');
+  runASelect.innerHTML = optionsHtml(comparableRuns, comparableRuns.length ? 'Select…' : 'No comparable versions');
+  runASelect.disabled = comparableRuns.length === 0;
+
+  populateRunB(runASelect.value);
 }
 
 // Group results by the first path segment (e.g. "A_CRTC0/A0_1_1.png" -> "A_CRTC0").
@@ -155,6 +192,7 @@ async function runCompare(refresh) {
 function bindEvents() {
   document.getElementById('compare-btn').addEventListener('click', () => runCompare(false));
   document.getElementById('refresh-btn').addEventListener('click', () => runCompare(true));
+  document.getElementById('runA-select').addEventListener('change', e => populateRunB(e.target.value));
 }
 
 async function init() {
