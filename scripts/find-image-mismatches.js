@@ -1,15 +1,21 @@
 #!/usr/bin/env node
 /**
- * Compares expected image filenames (from tests.json + archs.json) with actual
- * files in PictureBank, then proposes renames using Levenshtein distance.
+ * Checks a dataset's completeness: compares expected image filenames (from
+ * tests.json + archs.json) with actual files in PictureBank.
+ *
+ * By default only missing files are reported (plus unrecognized "extra"
+ * files, listed as-is). Pass --fuzzy to also propose renames for missing
+ * files using Levenshtein distance against the extra files, and write out
+ * mismatches-report.txt / rename-suggestions.sh.
  *
  * Matching is constrained to the same {testId}_CRTC{n} prefix so we never
  * propose cross-test or cross-CRTC renames.
  *
- * Usage: node scripts/find-image-mismatches.js [--picturedir /path/to/PictureBank]
- * Output:
- *   - mismatches-report.txt  : human-readable findings per arch
- *   - rename-suggestions.sh  : shell script with mv commands
+ * Usage:
+ *   node scripts/find-image-mismatches.js [--picturedir /path/to/PictureBank] [--fuzzy]
+ *   node scripts/find-image-mismatches.js --dir /path/to/PictureBank/amspirit/1.2 [--fuzzy]
+ *
+ * Exit code: non-zero if any expected file is missing (extra files don't count).
  */
 
 const fs = require('fs');
@@ -18,10 +24,18 @@ const path = require('path');
 // ── Config ────────────────────────────────────────────────────────────────────
 
 const args = process.argv.slice(2);
-const pictureDirFlag = args.indexOf('--picturedir');
-const PICTURE_DIR = pictureDirFlag !== -1
-  ? args[pictureDirFlag + 1]
+function getFlag(name) {
+  const i = args.indexOf(name);
+  return i !== -1 ? args[i + 1] : undefined;
+}
+const FUZZY = args.includes('--fuzzy');
+
+const pictureDirFlag = getFlag('--picturedir');
+const PICTURE_DIR = pictureDirFlag
+  ? path.resolve(pictureDirFlag)
   : path.resolve(__dirname, '../../PictureBank');
+
+const dirFlag = getFlag('--dir');
 
 const DATA_DIR = path.resolve(__dirname, '../data');
 
@@ -86,10 +100,36 @@ function groupByPrefix(files) {
   return map;
 }
 
-// ── Main ──────────────────────────────────────────────────────────────────────
+// ── Target resolution ─────────────────────────────────────────────────────────
+// A "target" is one { id, version, dir } dataset directory to check.
 
 const archs = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'archs.json'), 'utf8'));
 const tests = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'tests.json'), 'utf8'));
+
+let targets;
+
+if (dirFlag) {
+  const targetDir = path.resolve(dirFlag);
+  if (!fs.existsSync(targetDir) || !fs.statSync(targetDir).isDirectory()) {
+    console.error(`Error: directory not found: ${targetDir}`);
+    process.exit(1);
+  }
+
+  const matched = archs.find(a => path.resolve(PICTURE_DIR, a.id, a.version) === targetDir);
+  if (!matched) {
+    console.warn(`Warning: "${targetDir}" doesn't match any arch/version in archs.json — checking it anyway.`);
+  }
+
+  targets = [{
+    id: matched ? matched.id : path.basename(path.dirname(targetDir)),
+    version: matched ? matched.version : path.basename(targetDir),
+    dir: targetDir,
+  }];
+} else {
+  targets = archs.map(a => ({ id: a.id, version: a.version, dir: path.join(PICTURE_DIR, a.id, a.version) }));
+}
+
+// ── Main ──────────────────────────────────────────────────────────────────────
 
 const expectedSet = getExpectedSet(tests);
 
@@ -101,16 +141,31 @@ const renameLines = [
   '',
 ];
 
-let totalMissing = 0, totalMatched = 0, totalNoMatch = 0, totalAlreadyUsed = 0;
+let totalMissing = 0, totalExtra = 0, totalMatched = 0, totalNoMatch = 0;
 
-for (const arch of archs) {
-  const archDir = path.join(PICTURE_DIR, arch.id, arch.version);
-  const actual  = getActualFiles(archDir);
+for (const target of targets) {
+  const label = `${target.id}/${target.version}`;
+  const actual = getActualFiles(target.dir);
 
   const missing = [...expectedSet].filter(f => !actual.has(f)).sort();
-  const extra   = [...actual].filter(f => !expectedSet.has(f));
+  const extra   = [...actual].filter(f => !expectedSet.has(f)).sort();
 
-  if (missing.length === 0) continue;
+  if (missing.length === 0 && extra.length === 0) continue;
+
+  totalMissing += missing.length;
+  totalExtra += extra.length;
+
+  console.log(`\n${label}  (${missing.length} missing, ${extra.length} unrecognized)`);
+  if (missing.length) {
+    console.log('  Missing:');
+    for (const m of missing) console.log(`    ${m}`);
+  }
+  if (extra.length) {
+    console.log('  Extra (unrecognized):');
+    for (const e of extra) console.log(`    ${e}`);
+  }
+
+  if (!FUZZY || missing.length === 0) continue;
 
   // Group extra files by prefix for constrained matching
   const extraByPrefix = groupByPrefix(extra);
@@ -144,9 +199,9 @@ for (const arch of archs) {
   }
 
   reportLines.push(`\n${'═'.repeat(72)}`);
-  reportLines.push(`ARCH: ${arch.id}/${arch.version}  (${missing.length} missing, ${extra.length} unrecognized)`);
+  reportLines.push(`ARCH: ${label}  (${missing.length} missing, ${extra.length} unrecognized)`);
   reportLines.push('═'.repeat(72));
-  renameLines.push(`\n# ── ${arch.id}/${arch.version} ${'─'.repeat(50 - arch.id.length - arch.version.length)}`);
+  renameLines.push(`\n# ── ${label} ${'─'.repeat(50 - label.length)}`);
 
   let archMatched = 0, archNoMatch = 0;
   for (const row of rows) {
@@ -158,7 +213,7 @@ for (const arch of archs) {
       reportLines.push(`  MISSING : ${row.missing}`);
       reportLines.push(`  SUGGEST : ${row.match}  [dist=${row.dist}]${tag}`);
       reportLines.push('');
-      const mvCmd = `mv -n "${archDir}/${row.match}" "${archDir}/${row.missing}"`;
+      const mvCmd = `mv -n "${target.dir}/${row.match}" "${target.dir}/${row.missing}"`;
       renameLines.push(suspicious ? `# SUSPICIOUS (dist=${row.dist}): ${mvCmd}` : mvCmd);
     } else {
       archNoMatch++;
@@ -169,26 +224,30 @@ for (const arch of archs) {
       reportLines.push('');
       renameLines.push(`# NO MATCH: ${row.missing}  ${note}`);
     }
-    totalMissing++;
   }
 
   reportLines.push(`  → ${archMatched} rename suggestions, ${archNoMatch} truly absent`);
 }
 
-reportLines.unshift(
-  `Image mismatch report — ${new Date().toISOString()}`,
-  `PictureBank: ${PICTURE_DIR}`,
-  `Total missing: ${totalMissing}  |  Rename suggestions: ${totalMatched}  |  Truly absent: ${totalNoMatch}`,
-  '',
-);
+console.log(`\nTotal: ${totalMissing} missing | ${totalExtra} unrecognized`);
 
-const reportPath = path.resolve(__dirname, '../mismatches-report.txt');
-const renamePath = path.resolve(__dirname, '../rename-suggestions.sh');
+if (FUZZY) {
+  reportLines.unshift(
+    `Image mismatch report — ${new Date().toISOString()}`,
+    `PictureBank: ${PICTURE_DIR}`,
+    `Total missing: ${totalMissing}  |  Rename suggestions: ${totalMatched}  |  Truly absent: ${totalNoMatch}`,
+    '',
+  );
 
-fs.writeFileSync(reportPath, reportLines.join('\n') + '\n');
-fs.writeFileSync(renamePath, renameLines.join('\n') + '\n');
-fs.chmodSync(renamePath, 0o755);
+  const reportPath = path.resolve(__dirname, '../mismatches-report.txt');
+  const renamePath = path.resolve(__dirname, '../rename-suggestions.sh');
 
-console.log(`Report  : ${reportPath}`);
-console.log(`Renames : ${renamePath}`);
-console.log(`Total   : ${totalMissing} missing | ${totalMatched} rename suggestions | ${totalNoMatch} truly absent`);
+  fs.writeFileSync(reportPath, reportLines.join('\n') + '\n');
+  fs.writeFileSync(renamePath, renameLines.join('\n') + '\n');
+  fs.chmodSync(renamePath, 0o755);
+
+  console.log(`Report  : ${reportPath}`);
+  console.log(`Renames : ${renamePath}`);
+}
+
+process.exit(totalMissing > 0 ? 1 : 0);

@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 #
-# Renomme en masse les fichiers AMSPIRIT_X_YYYY.{SNA,PNG} d'un repertoire
-# en <Test>_CRTC<X>_<Subset>.{SNA,WEBP}, a partir d'un CSV de correspondance
+# Renomme en masse les fichiers <PREFIXE>_X_YYYY.<ext> d'un repertoire
+# (AMSPIRIT_..., CPCSE_..., quel que soit le prefixe emulateur) en
+# <Test>_CRTC<X>_<Subset>.{SNA,webp}, a partir d'un CSV de correspondance
 # RefHexa;Test;Subset. Les copies renommees sont ecrites dans <repertoire>/shakerland
-# (le repertoire source n'est jamais modifie). Les PNG sont convertis en WEBP (convert).
+# (le repertoire source n'est jamais modifie). Les images (PNG, BMP, ...) sont
+# converties en WEBP (ImageMagick), les SNA sont copies tels quels.
 #
 # Usage: ./rename_shaker.sh <repertoire_source> <fichier_csv>
 
@@ -31,7 +33,7 @@ if command -v magick >/dev/null 2>&1; then
 elif command -v convert >/dev/null 2>&1; then
     CONVERT_CMD=(convert)
 else
-    echo "Erreur: ImageMagick ('magick' ou 'convert') est requis pour la conversion PNG -> WEBP." >&2
+    echo "Erreur: ImageMagick ('magick' ou 'convert') est requis pour la conversion image -> WEBP." >&2
     exit 1
 fi
 
@@ -52,11 +54,15 @@ declare -A SUBSET_BY_HEXA
 } < "$CSV_FILE"
 
 shopt -s nullglob nocaseglob
-files=("$SRC_DIR"/AMSPIRIT_*.SNA "$SRC_DIR"/AMSPIRIT_*.PNG)
+IMAGE_EXTS=(PNG BMP JPG JPEG GIF TGA TIF TIFF)
+files=("$SRC_DIR"/*_*_*.SNA)
+for img_ext in "${IMAGE_EXTS[@]}"; do
+    files+=("$SRC_DIR"/*_*_*."$img_ext")
+done
 shopt -u nocaseglob
 
 if [[ ${#files[@]} -eq 0 ]]; then
-    echo "Aucun fichier AMSPIRIT_*.{SNA,PNG} trouve dans $SRC_DIR" >&2
+    echo "Aucun fichier <PREFIXE>_X_YYYY.{SNA,${IMAGE_EXTS[*]}} trouve dans $SRC_DIR" >&2
     exit 0
 fi
 
@@ -68,16 +74,16 @@ for src_path in "${files[@]}"; do
     ext="${filename##*.}"
     base="${filename%.*}"
 
-    # base = AMSPIRIT_X_YYYY -> on retire le prefixe puis on isole le dernier
-    # segment (YYYY) ; tout le reste (avant le dernier underscore) est X.
-    rest="${base#AMSPIRIT_}"
-    if [[ "$rest" == "$base" || "$rest" != *_* ]]; then
+    # base = <PREFIXE>_X_YYYY -> YYYY est le dernier segment, X l'avant-dernier ;
+    # le prefixe (nom de l'emulateur, peut contenir des underscores) est ignore.
+    yyyy="${base##*_}"
+    rest="${base%_*}"
+    x_part="${rest##*_}"
+    if [[ "$rest" != *_* || -z "$x_part" || ! "$yyyy" =~ ^[0-9A-Fa-f]{4}$ ]]; then
         echo "Ignore (nom inattendu): $filename" >&2
         count_skip=$((count_skip + 1))
         continue
     fi
-    x_part="${rest%_*}"
-    yyyy="${rest##*_}"
     hexa_key="${yyyy^^}"
 
     test="${TEST_BY_HEXA[$hexa_key]:-}"
@@ -96,21 +102,13 @@ for src_path in "${files[@]}"; do
 
     new_base="${test}_CRTC${x_part}_${subset}"
 
-    case "${ext^^}" in
-        SNA)
-            dest="$OUT_DIR/${new_base}.SNA"
-            cp -n -- "$src_path" "$dest"
-            ;;
-        PNG)
-            dest="$OUT_DIR/${new_base}.webp"
-            "${CONVERT_CMD[@]}" -- "$src_path" "$dest"
-            ;;
-        *)
-            echo "Ignore (extension inattendue): $filename" >&2
-            count_skip=$((count_skip + 1))
-            continue
-            ;;
-    esac
+    if [[ "${ext^^}" == SNA ]]; then
+        dest="$OUT_DIR/${new_base}.SNA"
+        cp -n -- "$src_path" "$dest"
+    else
+        dest="$OUT_DIR/${new_base}.webp"
+        "${CONVERT_CMD[@]}" -- "$src_path" "$dest"
+    fi
 
     echo "OK: $filename -> $(basename "$dest")"
     count_ok=$((count_ok + 1))

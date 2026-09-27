@@ -52,7 +52,7 @@ def make_convert_cmd(src, dest):
     """Use ImageMagick convert for BMP (cwebp can't handle 32-bit BMP), cwebp for others."""
     if src.lower().endswith('.bmp'):
         return f'convert -quality 90 "{src}" "{dest}"'
-    return f'cwebp -q 90 "{src}" -o "{dest}"'
+    return f'cwebp -lossless "{src}" -o "{dest}"'
 
 # ── Levenshtein ───────────────────────────────────────────────────────────────
 
