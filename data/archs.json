@@ -13,38 +13,45 @@
     "label": "Amspirit",
     "version": "0.953",
     "desc": "Amspirit",
-    "isEmulator": true
+    "isEmulator": true,
+    "url": "https://amspirit.fr"
   },
   {
-    "o": 1,
+    "o": 2,
     "id": "amspirit",
     "label": "Amspirit-lite",
     "version": "lite-1.15",
     "desc": "Amspirit",
-    "isEmulator": true
+    "isEmulator": true,
+    "url": "https://amspirit.fr"
   },
   {
-    "o": 2,
+    "o": 3,
+    "id": "cpcse",
+    "label": "Syntax Error",
+    "version": "0.2.1",
+    "desc": "CPC Syntax Error",
+    "isEmulator": true,
+    "url": "https://github.com/WacKEDmaN/CPCSyntaxError"
+
+  },
+  {
+    "o": 4,
     "id": "winape",
     "label": "Winape",
     "version": "2.0b3",
     "desc": "WinAPE (Win Amstrad Plus Emulator)",
-    "isEmulator": true
+    "isEmulator": true,
+    "url": "https://www.winape.net/"
+
   },
   {
-    "o": 3,
-    "id": "ace",
-    "label": "ACE",
-    "version": "1.22",
-    "desc": "",
-    "isEmulator": true
-  },
-  {
-    "o": 4,
+    "o": 5,
     "id": "cpcec",
     "label": "CPC-EC",
     "version": "20220806",
     "desc": "",
-    "isEmulator": true
+    "isEmulator": true,
+    "url": "http://cngsoft.no-ip.org/cpcec.htm"
   }
 ]
