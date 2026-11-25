@@ -29,7 +29,7 @@
     "o": 3,
     "id": "cpcse",
     "label": "CPC-SE",
-    "version": "0.8.0",
+    "version": "0.17.0",
     "desc": "CPC Syntax Error",
     "isEmulator": true,
     "url": "https://github.com/WacKEDmaN/CPCSyntaxError"
